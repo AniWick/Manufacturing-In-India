@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { X, BarChart3, Globe, TrendingUp, RefreshCw } from 'lucide-react';
+import { X, RefreshCw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import GrowthChart from './GrowthChart';
