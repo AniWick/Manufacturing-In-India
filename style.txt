@@ -1,0 +1,13 @@
+manufacturing-vibe-site/
+├── src/
+│   ├── components/
+│   │   ├── ManufacturingWindow.jsx    # Main modal/window
+│   │   ├── GrowthChart.jsx           # Line charts
+│   │   ├── SectorBreakdown.jsx       # Pie/doughnut charts  
+│   │   ├── DataTable.jsx             # Tabular data
+│   │   └── MetricsCard.jsx           # KPI displays
+│   ├── data/
+│   │   ├── iipData.js                # IIP time series
+│   │   ├── sectorData.js             # Sector performance
+│   │   └── stateData.js              # State-wise growth
+│   └── App.jsx
