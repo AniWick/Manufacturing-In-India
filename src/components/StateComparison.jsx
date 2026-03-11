@@ -46,13 +46,13 @@ const StateComparison = () => {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
-              <Award className="w-4 h-4 mr-2 text-manufacturing-orange" />
+              <Award className="w-4 h-4 mr-2 text-amber-500" />
               Top Performing States
             </h4>
             <div className="space-y-2">
               {sortedStates.slice(0, 4).map((state, idx) => (
                 <motion.div
-                  key={idx}
+                  key={state.state}
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: idx * 0.1 }}
@@ -70,13 +70,13 @@ const StateComparison = () => {
 
           <div>
             <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
-              <MapPin className="w-4 h-4 mr-2 text-manufacturing-teal" />
+              <MapPin className="w-4 h-4 mr-2 text-green-600" />
               All States Overview
             </h4>
             <div className="space-y-2 max-h-48 overflow-y-auto">
               {states.map((state, idx) => (
                 <div
-                  key={idx}
+                  key={`${state.state}-${idx}`}
                   className="flex justify-between items-center p-2 text-sm border-b border-gray-100 last:border-0"
                 >
                   <span className="text-gray-700">{state.state}</span>

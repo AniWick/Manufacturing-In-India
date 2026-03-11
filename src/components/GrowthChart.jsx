@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
+import { DataContext } from '../context/DataContext';
 
 const GrowthChart = () => {
-  const data = [
+  const { data, loading } = useContext(DataContext);
+
+  if (loading) {
+    return (
+      <div className="bg-gray-50 rounded-xl p-6 animate-pulse">
+        <div className="h-80 bg-gray-200 rounded"></div>
+      </div>
+    );
+  }
+
+  const chartData = data?.iipData || [
     { month: 'Jan 2025', value: 5.2 },
     { month: 'Feb 2025', value: 5.8 },
     { month: 'Mar 2025', value: 6.1 },
@@ -26,15 +37,15 @@ const GrowthChart = () => {
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold text-gray-800">Manufacturing Growth Trend</h3>
           <div className="flex items-center">
-            <TrendingUp className="w-4 h-4 text-manufacturing-teal mr-2" />
+            <TrendingUp className="w-4 h-4 text-green-600 mr-2" />
             <span className="text-sm text-gray-600">+10.8% vs last year</span>
           </div>
         </div>
         <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={data}>
+          <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="month" />
-            <YAxis domain={['0%', '10%']} />
+            <YAxis domain={[0, 10]} />
             <Tooltip />
             <Line 
               type="monotone" 

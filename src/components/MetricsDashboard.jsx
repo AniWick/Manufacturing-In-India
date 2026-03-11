@@ -25,21 +25,21 @@ const MetricsDashboard = () => {
       label: 'Current Growth Rate',
       value: `${data?.currentGrowth || 'N/A'}%`,
       icon: TrendingUp,
-      color: 'bg-manufacturing-teal',
+      color: 'bg-green-600',
       change: `+${(data?.currentGrowth - (data?.previousGrowth || 0)).toFixed(1)}%`
     },
     {
       label: 'Total Sectors',
       value: data?.sectors?.length || '7',
       icon: Factory,
-      color: 'bg-manufacturing-orange',
+      color: 'bg-amber-500',
       change: 'Active'
     },
     {
       label: 'States Tracked',
       value: data?.states?.length || '8',
       icon: Activity,
-      color: 'bg-manufacturing-blue',
+      color: 'bg-blue-600',
       change: 'Regions'
     }
   ];

@@ -118,10 +118,10 @@ const ManufacturingWindow = ({ isOpen, onClose }) => {
         {/* Footer Actions */}
         {!loading && data && (
           <div className="p-6 border-t border-gray-200 flex justify-center space-x-4">
-            <button className="px-4 py-2 bg-manufacturing-blue text-white rounded-lg hover:bg-manufacturing-blue-dark transition-colors">
+            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition-colors">
               Download Data
             </button>
-            <button className="px-4 py-2 bg-manufacturing-teal text-white rounded-lg hover:bg-manufacturing-teal-dark transition-colors">
+            <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-800 transition-colors">
               Share Report
             </button>
           </div>
