@@ -1,10 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 import { DataContext } from '../context/DataContext';
 
 const SectorBreakdown = () => {
   const { data, loading } = useContext(DataContext);
+  const [selectedSector, setSelectedSector] = useState('');
+
+  const sectors = data?.sectors || [];
+  const activeSector = sectors.find((sector) => sector.name === selectedSector) || sectors[0];
+
+  const sectorHistory = activeSector ? data?.sectorYearlyRecords?.[activeSector.name] || [] : [];
+
+  const sectorLeaders = useMemo(() => {
+    if (!activeSector || !data?.states) return [];
+    const sectorKey = activeSector.name.toLowerCase().replace(/\s*&\s*/g, '_').replace(/\s+/g, '_');
+    return data.states
+      .map((state) => {
+        const entries = Object.entries(state.portfolio || {});
+        const match = entries.find(([key]) => key === sectorKey || key.startsWith(sectorKey.slice(0, 4)));
+        return { state: state.state, value: match ? Number(match[1]) : 0, growth: state.growth };
+      })
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 5);
+  }, [activeSector, data]);
 
   if (loading) {
     return (
@@ -13,8 +32,6 @@ const SectorBreakdown = () => {
       </div>
     );
   }
-
-  const sectors = data?.sectors || [];
 
   return (
     <motion.div 
@@ -35,9 +52,10 @@ const SectorBreakdown = () => {
                 <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="growth" fill="#8884d8" name="Growth %" />
+                <Bar dataKey="growth" fill="#8884d8" name="Growth %" onClick={(entry) => setSelectedSector(entry.name)} />
               </BarChart>
             </ResponsiveContainer>
+            <p className="text-xs text-gray-500 mt-2">Click a sector bar, pie slice, or table row to drill deeper.</p>
           </div>
 
           {/* Pie Chart for Market Share */}
@@ -54,6 +72,7 @@ const SectorBreakdown = () => {
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="share"
+                  onClick={(entry) => setSelectedSector(entry.name)}
                 >
                   {sectors.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
@@ -77,7 +96,11 @@ const SectorBreakdown = () => {
             </thead>
             <tbody>
               {sectors.map((sector, idx) => (
-                <tr key={idx} className="border-b border-gray-100 hover:bg-white transition-colors">
+                <tr
+                  key={idx}
+                  className={`border-b border-gray-100 hover:bg-white transition-colors cursor-pointer ${activeSector?.name === sector.name ? 'bg-blue-50' : ''}`}
+                  onClick={() => setSelectedSector(sector.name)}
+                >
                   <td className="p-3">
                     <div className="flex items-center">
                       <div 
@@ -98,6 +121,42 @@ const SectorBreakdown = () => {
             </tbody>
           </table>
         </div>
+
+        {/* Drill-down */}
+        {activeSector && (
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-6 bg-white rounded-xl border border-gray-200 p-5"
+          >
+            <h4 className="text-base font-semibold text-gray-800 mb-3">{activeSector.name} Deep Dive</h4>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div>
+                <h5 className="text-sm font-medium text-gray-700 mb-2">Past Growth Records (2021-2025)</h5>
+                <ResponsiveContainer width="100%" height={220}>
+                  <LineChart data={sectorHistory}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <Tooltip formatter={(value) => `${value}%`} />
+                    <Line type="monotone" dataKey="growth" stroke={activeSector.color || '#2563eb'} strokeWidth={3} />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+              <div>
+                <h5 className="text-sm font-medium text-gray-700 mb-2">Top States In This Sector</h5>
+                <div className="space-y-2">
+                  {sectorLeaders.map((leader, idx) => (
+                    <div key={`${leader.state}-${idx}`} className="flex items-center justify-between p-2 rounded-lg bg-gray-50 border border-gray-200">
+                      <span className="text-sm font-medium text-gray-800">{leader.state}</span>
+                      <span className="text-sm text-blue-700 font-semibold">{leader.value}% mix</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.div>
   );

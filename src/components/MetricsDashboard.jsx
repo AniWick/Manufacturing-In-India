@@ -37,7 +37,7 @@ const MetricsDashboard = () => {
     },
     {
       label: 'States Tracked',
-      value: data?.states?.length || '8',
+      value: data?.states?.length || '21',
       icon: Activity,
       color: 'bg-blue-600',
       change: 'Regions'

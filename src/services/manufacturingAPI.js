@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { manufacturingData } from '../data/manufacturingData';
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://api.mosfi.org';
 
@@ -21,16 +22,14 @@ export const manufacturingAPI = {
    */
   getGrowthMetrics: async () => {
     try {
-      // Try real API first
       try {
         const response = await axiosInstance.get('/api/manufacturing/growth');
         return response.data;
       } catch (apiError) {
         console.warn('API request failed, using fallback data:', apiError.message);
-        // Return fallback data if API fails
         return {
-          currentGrowth: 4.0,
-          previousGrowth: 3.7,
+          currentGrowth: manufacturingData.currentGrowth,
+          previousGrowth: manufacturingData.previousGrowth,
           timestamp: new Date().toISOString()
         };
       }
@@ -43,27 +42,14 @@ export const manufacturingAPI = {
   /**
    * Fetch IIP (Index of Industrial Production) data
    */
-  getIIPData: async (startDate, endDate) => {
+  getIIPData: async () => {
     try {
       try {
-        const response = await axiosInstance.get('/api/manufacturing/iip', {
-          params: { startDate, endDate }
-        });
+        const response = await axiosInstance.get('/api/manufacturing/iip');
         return response.data;
       } catch (apiError) {
         console.warn('API request failed, using fallback data:', apiError.message);
-        // Return fallback data
-        return [
-          { month: 'Jan 2025', value: 5.2, category: 'Manufacturing' },
-          { month: 'Feb 2025', value: 5.8, category: 'Manufacturing' },
-          { month: 'Mar 2025', value: 6.1, category: 'Manufacturing' },
-          { month: 'Apr 2025', value: 5.9, category: 'Manufacturing' },
-          { month: 'May 2025', value: 6.3, category: 'Manufacturing' },
-          { month: 'Jun 2025', value: 6.7, category: 'Manufacturing' },
-          { month: 'Jul 2025', value: 7.1, category: 'Manufacturing' },
-          { month: 'Aug 2025', value: 7.5, category: 'Manufacturing' },
-          { month: 'Sep 2025', value: 8.2, category: 'Manufacturing' }
-        ];
+        return manufacturingData.iipData;
       }
     } catch (error) {
       console.error('Error fetching IIP data:', error);
@@ -81,16 +67,7 @@ export const manufacturingAPI = {
         return response.data;
       } catch (apiError) {
         console.warn('API request failed, using fallback data:', apiError.message);
-        // Return fallback data
-        return [
-          { name: 'Automotive', growth: 8.2, share: 15.3, color: '#1e3a8a' },
-          { name: 'Pharmaceuticals', growth: 12.1, share: 18.7, color: '#10b981' },
-          { name: 'Textiles', growth: 3.4, share: 12.1, color: '#f59e0b' },
-          { name: 'Electronics', growth: 15.6, share: 22.4, color: '#8b5cf6' },
-          { name: 'Chemicals', growth: 6.8, share: 14.2, color: '#ef4444' },
-          { name: 'Food Processing', growth: 4.9, share: 8.1, color: '#06b6d4' },
-          { name: 'Steel & Metals', growth: 5.3, share: 10.2, color: '#6b7280' }
-        ];
+        return manufacturingData.sectors;
       }
     } catch (error) {
       console.error('Error fetching sector data:', error);
@@ -108,20 +85,46 @@ export const manufacturingAPI = {
         return response.data;
       } catch (apiError) {
         console.warn('API request failed, using fallback data:', apiError.message);
-        // Return fallback data
-        return [
-          { state: 'Gujarat', growth: 7.8, rank: 1 },
-          { state: 'Maharashtra', growth: 6.9, rank: 2 },
-          { state: 'Tamil Nadu', growth: 6.2, rank: 3 },
-          { state: 'Uttar Pradesh', growth: 8.5, rank: 4 },
-          { state: 'Karnataka', growth: 9.1, rank: 5 },
-          { state: 'Telangana', growth: 7.3, rank: 6 },
-          { state: 'West Bengal', growth: 5.8, rank: 7 },
-          { state: 'Punjab', growth: 4.9, rank: 8 }
-        ];
+        return manufacturingData.states;
       }
     } catch (error) {
       console.error('Error fetching state data:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Fetch investment location data
+   */
+  getInvestmentData: async () => {
+    try {
+      try {
+        const response = await axiosInstance.get('/api/manufacturing/investments');
+        return response.data;
+      } catch (apiError) {
+        console.warn('API request failed, using fallback data:', apiError.message);
+        return manufacturingData.investmentLocations;
+      }
+    } catch (error) {
+      console.error('Error fetching investment data:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Fetch data sources
+   */
+  getDataSources: async () => {
+    try {
+      try {
+        const response = await axiosInstance.get('/api/manufacturing/sources');
+        return response.data;
+      } catch (apiError) {
+        console.warn('API request failed, using fallback data:', apiError.message);
+        return manufacturingData.dataSources;
+      }
+    } catch (error) {
+      console.error('Error fetching data sources:', error);
       throw error;
     }
   },
@@ -131,11 +134,13 @@ export const manufacturingAPI = {
    */
   getAllData: async () => {
     try {
-      const [growth, iip, sectors, states] = await Promise.all([
+      const [growth, iip, sectors, states, investments, sources] = await Promise.all([
         manufacturingAPI.getGrowthMetrics(),
         manufacturingAPI.getIIPData(),
         manufacturingAPI.getSectorData(),
-        manufacturingAPI.getStateData()
+        manufacturingAPI.getStateData(),
+        manufacturingAPI.getInvestmentData(),
+        manufacturingAPI.getDataSources()
       ]);
 
       return {
@@ -144,6 +149,13 @@ export const manufacturingAPI = {
         iipData: iip,
         sectors: sectors,
         states: states,
+        investmentLocations: investments,
+        dataSources: sources,
+        cityProfiles: manufacturingData.cityProfiles,
+        stateYearlyRecords: manufacturingData.stateYearlyRecords,
+        sectorYearlyRecords: manufacturingData.sectorYearlyRecords,
+        regionalClusters: manufacturingData.regionalClusters,
+        delhiNcrMetrics: manufacturingData.delhiNcrMetrics,
         lastUpdated: new Date().toISOString()
       };
     } catch (error) {
