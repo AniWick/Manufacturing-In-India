@@ -22,6 +22,7 @@ const DataSources = () => {
     { name: 'State Government Data', weight: 15 },
     { name: 'Sector-specific Agencies', weight: 5 }
   ];
+  const sectorProfiles = data?.sectorReportingProfiles || {};
 
   const totalWeight = sources.reduce((sum, s) => sum + s.weight, 0);
 
@@ -73,6 +74,22 @@ const DataSources = () => {
             );
           })}
         </div>
+
+        {Object.keys(sectorProfiles).length > 0 && (
+          <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <h4 className="font-semibold text-slate-900 mb-3">Sector Reporting Benchmarks</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {Object.entries(sectorProfiles).map(([sectorName, profile]) => (
+                <div key={sectorName} className="rounded-lg border border-slate-200 bg-white p-3">
+                  <p className="font-medium text-gray-800">{sectorName}</p>
+                  <p className="text-xs text-gray-600 mt-1">Primary: {profile.primaryAgency} | Exports: {profile.exportAgency}</p>
+                  <p className="text-xs text-gray-600 mt-1">Cadence: {profile.cadence}</p>
+                  <p className="text-xs text-gray-500 mt-1">{profile.benchmarkSeries}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Information Box */}
         <div className="mt-6 p-4 bg-indigo-50 rounded-lg border border-indigo-200">

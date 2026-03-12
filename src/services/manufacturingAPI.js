@@ -154,6 +154,9 @@ export const manufacturingAPI = {
         cityProfiles: manufacturingData.cityProfiles,
         stateYearlyRecords: manufacturingData.stateYearlyRecords,
         sectorYearlyRecords: manufacturingData.sectorYearlyRecords,
+        sectorProductAnalysis: manufacturingData.sectorProductAnalysis,
+        sectorReportingProfiles: manufacturingData.sectorReportingProfiles,
+        stateProductLeadership: manufacturingData.stateProductLeadership,
         regionalClusters: manufacturingData.regionalClusters,
         delhiNcrMetrics: manufacturingData.delhiNcrMetrics,
         lastUpdated: new Date().toISOString()

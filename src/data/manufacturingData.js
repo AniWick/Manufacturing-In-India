@@ -820,6 +820,275 @@ const sectorYearlyRecords = {
   ]
 };
 
+const sectorProductAnalysis = {
+  Automotive: {
+    unit: 'k vehicles',
+    domesticLabel: 'Domestic sales',
+    exportLabel: 'Exports',
+    insights: [
+      'Passenger vehicles and two-wheelers still anchor domestic demand, while exports remain concentrated in compact cars and scooters.',
+      'EV output is scaling fastest, with export share rising as OEMs use India as a small-car and light-EV base.',
+      'Commercial vehicle demand is being supported by infra spending, but export penetration remains lower than passenger formats.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 15320, exports: 3620 },
+      { year: '2022', domestic: 16680, exports: 4010 },
+      { year: '2023', domestic: 18240, exports: 4380 },
+      { year: '2024', domestic: 19860, exports: 4870 },
+      { year: '2025', domestic: 21620, exports: 5420 }
+    ],
+    products: [
+      { name: 'Passenger Cars', domestic: 4620, exports: 1180, growth: 8.9, topStates: ['Tamil Nadu', 'Maharashtra', 'Gujarat'] },
+      { name: 'Utility Vehicles', domestic: 3380, exports: 540, growth: 11.2, topStates: ['Maharashtra', 'Haryana', 'Karnataka'] },
+      { name: 'Two Wheelers', domestic: 8120, exports: 2190, growth: 7.8, topStates: ['Tamil Nadu', 'Karnataka', 'Rajasthan'] },
+      { name: 'Buses', domestic: 420, exports: 85, growth: 6.4, topStates: ['Karnataka', 'Tamil Nadu', 'Uttar Pradesh'] },
+      { name: 'Trucks', domestic: 660, exports: 110, growth: 6.9, topStates: ['Tamil Nadu', 'Maharashtra', 'Haryana'] },
+      { name: 'Electric Vehicles', domestic: 440, exports: 75, growth: 24.6, topStates: ['Karnataka', 'Tamil Nadu', 'Telangana'] }
+    ]
+  },
+  Electronics: {
+    unit: 'k units',
+    domesticLabel: 'Domestic shipments',
+    exportLabel: 'Exports',
+    insights: [
+      'Mobile phones remain the dominant electronics manufacturing line, with exports now large enough to materially change the mix.',
+      'Laptops and wearables are still domestically led, but export ramps are accelerating with new assembly capacity.',
+      'Consumer electronics remains broad-based, though export competitiveness is strongest in high-volume assembly categories.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 231400, exports: 28600 },
+      { year: '2022', domestic: 248200, exports: 36400 },
+      { year: '2023', domestic: 267900, exports: 44800 },
+      { year: '2024', domestic: 289600, exports: 55600 },
+      { year: '2025', domestic: 314800, exports: 70200 }
+    ],
+    products: [
+      { name: 'Mobile Phones', domestic: 182000, exports: 48600, growth: 18.5, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Karnataka'] },
+      { name: 'Laptops', domestic: 22400, exports: 3600, growth: 13.2, topStates: ['Karnataka', 'Tamil Nadu', 'Telangana'] },
+      { name: 'Televisions', domestic: 18200, exports: 2800, growth: 10.1, topStates: ['Maharashtra', 'Tamil Nadu', 'Uttar Pradesh'] },
+      { name: 'Wearables', domestic: 32800, exports: 6400, growth: 21.4, topStates: ['Karnataka', 'Haryana', 'Tamil Nadu'] },
+      { name: 'Tablets', domestic: 8800, exports: 1500, growth: 12.6, topStates: ['Uttar Pradesh', 'Karnataka', 'Andhra Pradesh'] },
+      { name: 'Networking Gear', domestic: 10600, exports: 7300, growth: 15.7, topStates: ['Tamil Nadu', 'Telangana', 'Gujarat'] }
+    ]
+  },
+  Pharmaceuticals: {
+    unit: 'mn packs',
+    domesticLabel: 'Domestic supply',
+    exportLabel: 'Exports',
+    insights: [
+      'Formulations continue to dominate domestic dispatches, while APIs are the export-heavy part of the portfolio.',
+      'Vaccines and biologics show the fastest post-pandemic export normalization and premium mix improvement.',
+      'OTC and chronic therapy products remain the most resilient domestic demand buckets.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 6240, exports: 2810 },
+      { year: '2022', domestic: 6680, exports: 3040 },
+      { year: '2023', domestic: 7120, exports: 3320 },
+      { year: '2024', domestic: 7610, exports: 3650 },
+      { year: '2025', domestic: 8160, exports: 4010 }
+    ],
+    products: [
+      { name: 'Generic Formulations', domestic: 2860, exports: 980, growth: 10.4, topStates: ['Telangana', 'Gujarat', 'Maharashtra'] },
+      { name: 'APIs', domestic: 920, exports: 1260, growth: 13.8, topStates: ['Gujarat', 'Andhra Pradesh', 'Telangana'] },
+      { name: 'Vaccines', domestic: 680, exports: 520, growth: 11.1, topStates: ['Telangana', 'Maharashtra', 'Karnataka'] },
+      { name: 'Biologics', domestic: 410, exports: 260, growth: 15.3, topStates: ['Karnataka', 'Telangana', 'Maharashtra'] },
+      { name: 'OTC Products', domestic: 2140, exports: 460, growth: 8.7, topStates: ['Maharashtra', 'Uttar Pradesh', 'Gujarat'] },
+      { name: 'Medical Devices', domestic: 1150, exports: 530, growth: 14.2, topStates: ['Tamil Nadu', 'Telangana', 'Haryana'] }
+    ]
+  },
+  Textiles: {
+    unit: 'mn pieces',
+    domesticLabel: 'Domestic offtake',
+    exportLabel: 'Exports',
+    insights: [
+      'Apparel remains the biggest domestic textile category, while home textiles and technical textiles drive export gains.',
+      'Synthetic textiles are growing faster than cotton-led categories due to performance-wear demand.',
+      'Technical textiles are becoming a more visible industrial manufacturing segment rather than a niche line.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 8920, exports: 2510 },
+      { year: '2022', domestic: 9310, exports: 2640 },
+      { year: '2023', domestic: 9680, exports: 2780 },
+      { year: '2024', domestic: 10090, exports: 2950 },
+      { year: '2025', domestic: 10540, exports: 3140 }
+    ],
+    products: [
+      { name: 'Apparel', domestic: 3480, exports: 760, growth: 4.2, topStates: ['Tamil Nadu', 'Gujarat', 'Karnataka'] },
+      { name: 'Home Textiles', domestic: 1620, exports: 880, growth: 5.1, topStates: ['Tamil Nadu', 'Punjab', 'Rajasthan'] },
+      { name: 'Cotton Yarn', domestic: 1880, exports: 620, growth: 2.9, topStates: ['Gujarat', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'Synthetic Fabrics', domestic: 1740, exports: 430, growth: 5.8, topStates: ['Gujarat', 'Maharashtra', 'Rajasthan'] },
+      { name: 'Technical Textiles', domestic: 920, exports: 250, growth: 9.7, topStates: ['Maharashtra', 'Tamil Nadu', 'Karnataka'] },
+      { name: 'Garment Accessories', domestic: 900, exports: 200, growth: 4.5, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Punjab'] }
+    ]
+  },
+  Chemicals: {
+    unit: 'k tonnes',
+    domesticLabel: 'Domestic dispatches',
+    exportLabel: 'Exports',
+    insights: [
+      'Specialty chemicals now contribute a larger export mix than bulk chemicals, especially in western India.',
+      'Agrochemicals remain cyclical but still export strongly relative to domestic volumes.',
+      'Petrochemicals continue to dominate tonnage, though not necessarily growth or export intensity.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 18120, exports: 5420 },
+      { year: '2022', domestic: 19040, exports: 5810 },
+      { year: '2023', domestic: 20180, exports: 6260 },
+      { year: '2024', domestic: 21460, exports: 6820 },
+      { year: '2025', domestic: 22840, exports: 7410 }
+    ],
+    products: [
+      { name: 'Specialty Chemicals', domestic: 2820, exports: 1940, growth: 11.4, topStates: ['Gujarat', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'Petrochemicals', domestic: 9540, exports: 2180, growth: 5.1, topStates: ['Gujarat', 'Maharashtra', 'Odisha'] },
+      { name: 'Agrochemicals', domestic: 2460, exports: 1220, growth: 7.8, topStates: ['Gujarat', 'Maharashtra', 'Madhya Pradesh'] },
+      { name: 'Industrial Gases', domestic: 3180, exports: 390, growth: 6.6, topStates: ['Odisha', 'Tamil Nadu', 'Chhattisgarh'] },
+      { name: 'Dyes & Pigments', domestic: 1710, exports: 980, growth: 8.9, topStates: ['Gujarat', 'Rajasthan', 'Maharashtra'] },
+      { name: 'Fertilizer Intermediates', domestic: 3130, exports: 700, growth: 5.9, topStates: ['Gujarat', 'Uttar Pradesh', 'Andhra Pradesh'] }
+    ]
+  },
+  'Food Processing': {
+    unit: 'k tonnes',
+    domesticLabel: 'Domestic demand',
+    exportLabel: 'Exports',
+    insights: [
+      'Packaged foods and dairy remain largely domestic, while marine and fruit products carry higher export intensity.',
+      'Processed staples are scaling with modern retail and quick-commerce penetration in major cities.',
+      'Cold-chain linked categories are improving export realization faster than the rest of the basket.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 22350, exports: 3860 },
+      { year: '2022', domestic: 23210, exports: 4050 },
+      { year: '2023', domestic: 24260, exports: 4280 },
+      { year: '2024', domestic: 25440, exports: 4560 },
+      { year: '2025', domestic: 26780, exports: 4880 }
+    ],
+    products: [
+      { name: 'Packaged Foods', domestic: 7250, exports: 620, growth: 6.2, topStates: ['Maharashtra', 'Karnataka', 'Tamil Nadu'] },
+      { name: 'Dairy Products', domestic: 5860, exports: 310, growth: 5.4, topStates: ['Uttar Pradesh', 'Gujarat', 'Punjab'] },
+      { name: 'Processed Fruits', domestic: 2840, exports: 1160, growth: 7.3, topStates: ['Maharashtra', 'Andhra Pradesh', 'Karnataka'] },
+      { name: 'Marine Products', domestic: 1120, exports: 1590, growth: 8.8, topStates: ['Andhra Pradesh', 'Gujarat', 'Kerala'] },
+      { name: 'Beverages', domestic: 4720, exports: 540, growth: 5.9, topStates: ['Maharashtra', 'Telangana', 'Karnataka'] },
+      { name: 'Ready-to-Eat Foods', domestic: 4990, exports: 660, growth: 9.6, topStates: ['Karnataka', 'Tamil Nadu', 'Haryana'] }
+    ]
+  },
+  'Steel & Metals': {
+    unit: 'k tonnes',
+    domesticLabel: 'Domestic dispatches',
+    exportLabel: 'Exports',
+    insights: [
+      'Flat steel and aluminum continue to supply domestic capex and auto demand, while export volatility remains highest in long products.',
+      'Stainless and engineering alloys are smaller in tonnage but stronger in value-added exports.',
+      'Infrastructure and energy projects are anchoring domestic offtake for primary steel products.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 82600, exports: 12840 },
+      { year: '2022', domestic: 85440, exports: 13310 },
+      { year: '2023', domestic: 88720, exports: 13950 },
+      { year: '2024', domestic: 92460, exports: 14780 },
+      { year: '2025', domestic: 96680, exports: 15620 }
+    ],
+    products: [
+      { name: 'Flat Steel', domestic: 28600, exports: 5120, growth: 5.8, topStates: ['Odisha', 'Chhattisgarh', 'Jharkhand'] },
+      { name: 'Long Steel', domestic: 21440, exports: 2980, growth: 4.9, topStates: ['Chhattisgarh', 'Odisha', 'Karnataka'] },
+      { name: 'Stainless Steel', domestic: 10180, exports: 1620, growth: 6.7, topStates: ['Gujarat', 'Maharashtra', 'Karnataka'] },
+      { name: 'Aluminium Products', domestic: 15460, exports: 3410, growth: 7.1, topStates: ['Odisha', 'Chhattisgarh', 'Andhra Pradesh'] },
+      { name: 'Copper Products', domestic: 8200, exports: 1190, growth: 6.0, topStates: ['Gujarat', 'Maharashtra', 'Rajasthan'] },
+      { name: 'Engineering Alloys', domestic: 12800, exports: 1300, growth: 7.6, topStates: ['Karnataka', 'Tamil Nadu', 'Maharashtra'] }
+    ]
+  }
+};
+
+const sectorReportingProfiles = {
+  Automotive: {
+    primaryAgency: 'SIAM',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly wholesale and export reporting',
+    methodology: 'Vehicle categories aligned to SIAM dispatch buckets with export shipments shown separately.',
+    benchmarkSeries: 'Passenger vehicles, CVs, two-wheelers and EVs'
+  },
+  Electronics: {
+    primaryAgency: 'ICEA',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly production and quarterly export benchmarking',
+    methodology: 'Product categories aligned to handset and electronics assembly reporting used in ICEA-style market updates.',
+    benchmarkSeries: 'Mobiles, computing devices, wearables and networking equipment'
+  },
+  Pharmaceuticals: {
+    primaryAgency: 'Department of Pharmaceuticals',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly formulations tracking and quarterly export benchmarking',
+    methodology: 'Domestic packs and export dispatches split by formulations, APIs and specialty therapy categories.',
+    benchmarkSeries: 'Formulations, APIs, vaccines, biologics and devices'
+  },
+  Textiles: {
+    primaryAgency: 'Ministry of Textiles',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly textile production and quarterly trade releases',
+    methodology: 'Domestic offtake and exports arranged in apparel, yarn, fabric and technical textile groupings.',
+    benchmarkSeries: 'Apparel, yarn, home textiles and technical textiles'
+  },
+  Chemicals: {
+    primaryAgency: 'Department of Chemicals and Petrochemicals',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly output and quarterly trade benchmarking',
+    methodology: 'Category lines separate specialty chemicals, petrochemicals and industrial intermediates.',
+    benchmarkSeries: 'Specialty, petrochemicals, agrochemicals and industrial gases'
+  },
+  'Food Processing': {
+    primaryAgency: 'MoFPI',
+    exportAgency: 'APEDA',
+    cadence: 'Monthly processing output and quarterly export benchmarking',
+    methodology: 'Domestic offtake and exports arranged around packaged foods, dairy, marine and prepared foods.',
+    benchmarkSeries: 'Packaged foods, dairy, marine and ready-to-eat foods'
+  },
+  'Steel & Metals': {
+    primaryAgency: 'Ministry of Steel',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly dispatches and quarterly trade benchmarking',
+    methodology: 'Primary and value-added metals mapped to dispatch and export tonnage by product family.',
+    benchmarkSeries: 'Flat steel, long steel, aluminium, stainless and engineering alloys'
+  }
+};
+
+const stateProductLeadership = Object.entries(sectorProductAnalysis).reduce((accumulator, [sectorName, sectorAnalysis]) => {
+  sectorAnalysis.products.forEach((product) => {
+    const domesticWeights = [0.46, 0.33, 0.21];
+    const exportWeights = [0.42, 0.34, 0.24];
+
+    product.topStates.forEach((stateName, index) => {
+      const leadershipEntry = {
+        sector: sectorName,
+        product: product.name,
+        rank: index + 1,
+        domestic: Math.round(product.domestic * (domesticWeights[index] || 0.18)),
+        exports: Math.round(product.exports * (exportWeights[index] || 0.18)),
+        growth: product.growth,
+        unit: sectorAnalysis.unit,
+        exportMix: (product.domestic + product.exports)
+          ? Number(((product.exports / (product.domestic + product.exports)) * 100).toFixed(1))
+          : 0,
+        reportingAgency: sectorReportingProfiles[sectorName]?.primaryAgency || 'Industry source',
+        exportAgency: sectorReportingProfiles[sectorName]?.exportAgency || 'DGCI&S'
+      };
+
+      accumulator[stateName] = accumulator[stateName] || [];
+      accumulator[stateName].push(leadershipEntry);
+    });
+  });
+
+  return accumulator;
+}, {});
+
+Object.keys(stateProductLeadership).forEach((stateName) => {
+  stateProductLeadership[stateName] = stateProductLeadership[stateName]
+    .map((entry) => ({
+      ...entry,
+      total: entry.domestic + entry.exports
+    }))
+    .sort((left, right) => right.total - left.total)
+    .slice(0, 8);
+});
+
 const states = [
   { state: 'Gujarat', growth: 7.8, rank: 1, investment: 28450, vehicleRegistrations: 245000, portfolio: { automotive: 35, electronics: 30, pharma: 20, other: 15 }, mainCities: ['Ahmedabad', 'Vadodara', 'Surat', 'Rajkot', 'Bhavnagar', 'Anand'] },
   { state: 'Maharashtra', growth: 6.9, rank: 2, investment: 26890, vehicleRegistrations: 385000, portfolio: { automotive: 28, pharma: 32, chemicals: 25, other: 15 }, mainCities: ['Mumbai', 'Pune', 'Nashik', 'Aurangabad', 'Nagpur', 'Kolhapur'] },
@@ -972,6 +1241,9 @@ export const manufacturingData = {
   cityProfiles,
   stateYearlyRecords,
   sectorYearlyRecords,
+  sectorProductAnalysis,
+  sectorReportingProfiles,
+  stateProductLeadership,
   regionalClusters,
   delhiNcrMetrics: {
     region: 'Delhi/NCR',

@@ -1,10 +1,9 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { DataContext } from '../context/DataContext';
 
-const RegionalClusterCards = () => {
+const RegionalClusterCards = ({ selectedClusterName, onSelectCluster }) => {
   const { data, loading } = useContext(DataContext);
-  const [selectedClusterName, setSelectedClusterName] = useState('');
 
   const clusters = data?.regionalClusters || [];
   const selectedCluster = clusters.find((cluster) => cluster.name === selectedClusterName) || clusters[0];
@@ -33,7 +32,7 @@ const RegionalClusterCards = () => {
         {clusters.map((cluster) => (
           <button
             key={cluster.name}
-            onClick={() => setSelectedClusterName(cluster.name)}
+            onClick={() => onSelectCluster?.(cluster.name)}
             className={`text-left p-4 rounded-xl border transition-all ${selectedCluster?.name === cluster.name ? 'bg-blue-600 text-white border-blue-700' : 'bg-white border-gray-200 hover:border-blue-300'}`}
           >
             <p className="font-semibold text-sm">{cluster.name}</p>

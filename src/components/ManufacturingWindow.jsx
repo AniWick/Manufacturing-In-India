@@ -18,12 +18,19 @@ import { DataContext } from '../context/DataContext';
 const ManufacturingWindow = ({ isOpen, onClose }) => {
   const { data, loading, error, fetchData, refetchData } = useContext(DataContext);
   const [activePage, setActivePage] = useState('overview');
+  const [selectedClusterName, setSelectedClusterName] = useState('');
 
   useEffect(() => {
     if (isOpen && !data) {
       fetchData();
     }
   }, [isOpen, data, fetchData]);
+
+  useEffect(() => {
+    if (!selectedClusterName && data?.regionalClusters?.length) {
+      setSelectedClusterName(data.regionalClusters[0].name);
+    }
+  }, [data, selectedClusterName]);
 
   const handleDownloadData = () => {
     if (!data) return;
@@ -96,6 +103,9 @@ const ManufacturingWindow = ({ isOpen, onClose }) => {
   ]), []);
 
   const activePageMeta = pages.find((page) => page.id === activePage) || pages[0];
+  const selectedCluster = data?.regionalClusters?.find((cluster) => cluster.name === selectedClusterName)
+    || data?.regionalClusters?.[0]
+    || null;
 
   if (!isOpen) return null;
 
@@ -213,15 +223,18 @@ const ManufacturingWindow = ({ isOpen, onClose }) => {
                 {activePage === 'overview' && (
                   <>
                     <MetricsDashboard />
-                    <DelhiNCRCard />
+                    <DelhiNCRCard variant="india" />
                     <GrowthChart />
                   </>
                 )}
 
                 {activePage === 'regions' && (
                   <>
-                    <RegionalClusterCards />
-                    <DelhiNCRCard />
+                    <RegionalClusterCards
+                      selectedClusterName={selectedClusterName}
+                      onSelectCluster={setSelectedClusterName}
+                    />
+                    <DelhiNCRCard variant="region" selectedCluster={selectedCluster} />
                   </>
                 )}
 

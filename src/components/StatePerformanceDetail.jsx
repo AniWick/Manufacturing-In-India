@@ -1,10 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Award, DollarSign, MapPin } from 'lucide-react';
+import { TrendingUp, Award, DollarSign, MapPin, Ship } from 'lucide-react';
 import { DataContext } from '../context/DataContext';
 
 const StatePerformanceDetail = () => {
   const { data, loading } = useContext(DataContext);
+
+  const states = data?.states || [];
+  const stateLeadSummary = useMemo(() => {
+    return (data?.states || []).reduce((accumulator, state) => {
+      const leadLines = data?.stateProductLeadership?.[state.state] || [];
+      const topLine = leadLines[0] || null;
+      const exportLeader = leadLines.slice().sort((left, right) => right.exportMix - left.exportMix)[0] || null;
+
+      accumulator[state.state] = {
+        topLine,
+        exportLeader
+      };
+      return accumulator;
+    }, {});
+  }, [data]);
 
   if (loading) {
     return (
@@ -13,8 +28,6 @@ const StatePerformanceDetail = () => {
       </div>
     );
   }
-
-  const states = data?.states || [];
 
   return (
     <motion.div 
@@ -36,6 +49,8 @@ const StatePerformanceDetail = () => {
                 <th className="text-left px-6 py-4 font-semibold">State</th>
                 <th className="text-left px-6 py-4 font-semibold">Growth Rate</th>
                 <th className="text-left px-6 py-4 font-semibold">Total Investment</th>
+                <th className="text-left px-6 py-4 font-semibold">Lead Product Line</th>
+                <th className="text-left px-6 py-4 font-semibold">Export-led Line</th>
                 <th className="text-left px-6 py-4 font-semibold">Main Manufacturing Hubs</th>
               </tr>
             </thead>
@@ -43,6 +58,7 @@ const StatePerformanceDetail = () => {
               {states.map((state, idx) => {
                 const growthColor = state.growth >= 8 ? 'text-green-700 bg-green-50' : state.growth >= 6 ? 'text-blue-700 bg-blue-50' : 'text-orange-700 bg-orange-50';
                 const bgColor = idx % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-gray-50 to-white';
+                const leadSummary = stateLeadSummary[state.state] || {};
 
                 return (
                   <motion.tr
@@ -83,6 +99,29 @@ const StatePerformanceDetail = () => {
                         <DollarSign className="w-4 h-4 text-blue-600" />
                         <span className="font-bold text-gray-900">₹{state.investment}Cr</span>
                       </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      {leadSummary.topLine ? (
+                        <div>
+                          <div className="font-semibold text-gray-900 text-sm">{leadSummary.topLine.product}</div>
+                          <div className="text-xs text-gray-500 mt-1">{leadSummary.topLine.sector} • {leadSummary.topLine.domestic.toLocaleString()} domestic</div>
+                        </div>
+                      ) : (
+                        <span className="text-sm text-gray-400">No line mapped</span>
+                      )}
+                    </td>
+                    <td className="px-6 py-4">
+                      {leadSummary.exportLeader ? (
+                        <div className="flex items-start gap-2">
+                          <Ship className="w-4 h-4 text-violet-600 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-900 text-sm">{leadSummary.exportLeader.product}</div>
+                            <div className="text-xs text-gray-500 mt-1">{leadSummary.exportLeader.exportMix}% export mix</div>
+                          </div>
+                        </div>
+                      ) : (
+                        <span className="text-sm text-gray-400">No export line</span>
+                      )}
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-start gap-1">
