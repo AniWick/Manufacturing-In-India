@@ -16,7 +16,7 @@ const InvestmentMap = () => {
   }
 
   const locations = data?.investmentLocations || [];
-  const chartLocations = locations.slice(0, 12);
+  const chartLocations = locations.slice(0, 20);
   const totalInvestment = locations.reduce((sum, loc) => sum + (loc.amount || 0), 0);
 
   return (
@@ -29,7 +29,7 @@ const InvestmentMap = () => {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h3 className="text-2xl font-bold text-gray-800">Investment Hotspots</h3>
-            <p className="text-sm text-gray-600 mt-1">Manufacturing investments by city (Top 30 locations)</p>
+            <p className="text-sm text-gray-600 mt-1">Manufacturing investments by city (Top 50 locations)</p>
           </div>
           <div className="flex items-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-lg">
             <MapPin className="w-5 h-5" />
@@ -68,7 +68,7 @@ const InvestmentMap = () => {
           {/* Location Details */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4">
-              <h4 className="font-semibold">Top 30 Investment Cities & Sectors</h4>
+              <h4 className="font-semibold">Top 50 Investment Cities & Sectors</h4>
             </div>
             <div className="space-y-3 p-4 max-h-96 overflow-y-auto">
               {locations.map((location, idx) => (

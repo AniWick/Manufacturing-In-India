@@ -156,6 +156,7 @@ export const manufacturingAPI = {
         sectorYearlyRecords: manufacturingData.sectorYearlyRecords,
         sectorProductAnalysis: manufacturingData.sectorProductAnalysis,
         sectorReportingProfiles: manufacturingData.sectorReportingProfiles,
+        sectorIntelligence: manufacturingData.sectorIntelligence,
         stateProductLeadership: manufacturingData.stateProductLeadership,
         regionalClusters: manufacturingData.regionalClusters,
         delhiNcrMetrics: manufacturingData.delhiNcrMetrics,

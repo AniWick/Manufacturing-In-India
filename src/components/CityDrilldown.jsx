@@ -8,7 +8,7 @@ const CityDrilldown = () => {
   const [selectedCityName, setSelectedCityName] = useState('');
 
   const cityProfiles = data?.cityProfiles || [];
-  const topCities = cityProfiles.slice(0, 30);
+  const topCities = cityProfiles.slice(0, 50);
   const selectedCity = topCities.find((city) => city.city === selectedCityName) || topCities[0];
 
   const sectorMixData = useMemo(() => {
@@ -28,7 +28,7 @@ const CityDrilldown = () => {
       transition={{ delay: 0.35 }}
       className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6"
     >
-      <h3 className="text-xl font-bold text-gray-800">City-level Drill-down (Top 30)</h3>
+      <h3 className="text-xl font-bold text-gray-800">City-level Drill-down (Top 50)</h3>
       <p className="text-sm text-gray-600 mt-1 mb-4">Click a city to view trend, sector mix and investment history</p>
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 mb-5">

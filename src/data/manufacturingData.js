@@ -559,6 +559,312 @@ const cityProfiles = [
       { year: '2024', investment: 2990, growth: 6.2, vehicleRegistrations: 52000 },
       { year: '2025', investment: 3360, growth: 6.7, vehicleRegistrations: 57000 }
     ]
+  },
+  {
+    city: 'Rajkot',
+    state: 'Gujarat',
+    cluster: 'Ahmedabad-Vadodara-Surat',
+    leadSector: 'Engineering Goods',
+    currentInvestment: 3290,
+    currentGrowth: 7.2,
+    vehicleRegistrations: 61000,
+    sectorMix: { engineering_goods: 34, automotive: 26, chemicals: 19, battery_manufacturing: 21 },
+    history: [
+      { year: '2021', investment: 2140, growth: 4.9, vehicleRegistrations: 39000 },
+      { year: '2022', investment: 2360, growth: 5.6, vehicleRegistrations: 44000 },
+      { year: '2023', investment: 2640, growth: 6.2, vehicleRegistrations: 50000 },
+      { year: '2024', investment: 2960, growth: 6.7, vehicleRegistrations: 55000 },
+      { year: '2025', investment: 3290, growth: 7.2, vehicleRegistrations: 61000 }
+    ]
+  },
+  {
+    city: 'Aurangabad',
+    state: 'Maharashtra',
+    cluster: 'Mumbai-Pune-Nashik',
+    leadSector: 'Hardware Assembly',
+    currentInvestment: 3520,
+    currentGrowth: 7.0,
+    vehicleRegistrations: 64000,
+    sectorMix: { hardware_assembly: 31, automotive: 28, electronics: 24, chemicals: 17 },
+    history: [
+      { year: '2021', investment: 2280, growth: 4.8, vehicleRegistrations: 42000 },
+      { year: '2022', investment: 2520, growth: 5.5, vehicleRegistrations: 47000 },
+      { year: '2023', investment: 2820, growth: 6.0, vehicleRegistrations: 53000 },
+      { year: '2024', investment: 3160, growth: 6.5, vehicleRegistrations: 59000 },
+      { year: '2025', investment: 3520, growth: 7.0, vehicleRegistrations: 64000 }
+    ]
+  },
+  {
+    city: 'Bhubaneswar',
+    state: 'Odisha',
+    cluster: 'Eastern Metals Belt',
+    leadSector: 'Defense Manufacturing',
+    currentInvestment: 3780,
+    currentGrowth: 7.4,
+    vehicleRegistrations: 70000,
+    sectorMix: { defense_manufacturing: 29, steel: 27, chemicals: 22, electronics: 22 },
+    history: [
+      { year: '2021', investment: 2430, growth: 5.0, vehicleRegistrations: 45000 },
+      { year: '2022', investment: 2700, growth: 5.8, vehicleRegistrations: 51000 },
+      { year: '2023', investment: 3020, growth: 6.4, vehicleRegistrations: 58000 },
+      { year: '2024', investment: 3380, growth: 6.9, vehicleRegistrations: 64000 },
+      { year: '2025', investment: 3780, growth: 7.4, vehicleRegistrations: 70000 }
+    ]
+  },
+  {
+    city: 'Cuttack',
+    state: 'Odisha',
+    cluster: 'Eastern Metals Belt',
+    leadSector: 'Shipbuilding',
+    currentInvestment: 2980,
+    currentGrowth: 6.8,
+    vehicleRegistrations: 56000,
+    sectorMix: { shipbuilding: 34, steel: 29, chemicals: 19, food_processing: 18 },
+    history: [
+      { year: '2021', investment: 1940, growth: 4.5, vehicleRegistrations: 36000 },
+      { year: '2022', investment: 2140, growth: 5.1, vehicleRegistrations: 41000 },
+      { year: '2023', investment: 2390, growth: 5.7, vehicleRegistrations: 46000 },
+      { year: '2024', investment: 2670, growth: 6.2, vehicleRegistrations: 51000 },
+      { year: '2025', investment: 2980, growth: 6.8, vehicleRegistrations: 56000 }
+    ]
+  },
+  {
+    city: 'Tiruppur',
+    state: 'Tamil Nadu',
+    cluster: 'Chennai-Coimbatore-Hosur',
+    leadSector: 'Textiles',
+    currentInvestment: 3410,
+    currentGrowth: 7.3,
+    vehicleRegistrations: 60000,
+    sectorMix: { textiles: 42, chemicals: 18, hardware_assembly: 20, mobile_components: 20 },
+    history: [
+      { year: '2021', investment: 2220, growth: 5.0, vehicleRegistrations: 39000 },
+      { year: '2022', investment: 2450, growth: 5.8, vehicleRegistrations: 44000 },
+      { year: '2023', investment: 2730, growth: 6.3, vehicleRegistrations: 50000 },
+      { year: '2024', investment: 3060, growth: 6.9, vehicleRegistrations: 55000 },
+      { year: '2025', investment: 3410, growth: 7.3, vehicleRegistrations: 60000 }
+    ]
+  },
+  {
+    city: 'Madurai',
+    state: 'Tamil Nadu',
+    cluster: 'Chennai-Coimbatore-Hosur',
+    leadSector: 'Battery Manufacturing',
+    currentInvestment: 3080,
+    currentGrowth: 7.6,
+    vehicleRegistrations: 58000,
+    sectorMix: { battery_manufacturing: 33, textiles: 22, electronics: 24, food_processing: 21 },
+    history: [
+      { year: '2021', investment: 1990, growth: 5.1, vehicleRegistrations: 37000 },
+      { year: '2022', investment: 2210, growth: 5.9, vehicleRegistrations: 42000 },
+      { year: '2023', investment: 2470, growth: 6.6, vehicleRegistrations: 47000 },
+      { year: '2024', investment: 2770, growth: 7.1, vehicleRegistrations: 53000 },
+      { year: '2025', investment: 3080, growth: 7.6, vehicleRegistrations: 58000 }
+    ]
+  },
+  {
+    city: 'Mysuru',
+    state: 'Karnataka',
+    cluster: 'Bangalore-Hosur',
+    leadSector: 'Mobile Components',
+    currentInvestment: 3360,
+    currentGrowth: 8.1,
+    vehicleRegistrations: 62000,
+    sectorMix: { mobile_components: 36, electronics: 28, hardware_assembly: 22, automotive: 14 },
+    history: [
+      { year: '2021', investment: 2130, growth: 5.5, vehicleRegistrations: 39000 },
+      { year: '2022', investment: 2380, growth: 6.2, vehicleRegistrations: 45000 },
+      { year: '2023', investment: 2680, growth: 6.9, vehicleRegistrations: 51000 },
+      { year: '2024', investment: 3010, growth: 7.5, vehicleRegistrations: 57000 },
+      { year: '2025', investment: 3360, growth: 8.1, vehicleRegistrations: 62000 }
+    ]
+  },
+  {
+    city: 'Mangalore',
+    state: 'Karnataka',
+    cluster: 'Bangalore-Hosur',
+    leadSector: 'Shipbuilding',
+    currentInvestment: 3240,
+    currentGrowth: 7.8,
+    vehicleRegistrations: 59000,
+    sectorMix: { shipbuilding: 32, chemicals: 24, electronics: 23, food_processing: 21 },
+    history: [
+      { year: '2021', investment: 2080, growth: 5.2, vehicleRegistrations: 38000 },
+      { year: '2022', investment: 2320, growth: 5.9, vehicleRegistrations: 43000 },
+      { year: '2023', investment: 2600, growth: 6.5, vehicleRegistrations: 48000 },
+      { year: '2024', investment: 2910, growth: 7.1, vehicleRegistrations: 54000 },
+      { year: '2025', investment: 3240, growth: 7.8, vehicleRegistrations: 59000 }
+    ]
+  },
+  {
+    city: 'Guntur',
+    state: 'Andhra Pradesh',
+    cluster: 'Visakhapatnam-Vijayawada',
+    leadSector: 'Hardware Assembly',
+    currentInvestment: 2870,
+    currentGrowth: 6.9,
+    vehicleRegistrations: 54000,
+    sectorMix: { hardware_assembly: 31, food_processing: 27, pharmaceuticals: 22, mobile_components: 20 },
+    history: [
+      { year: '2021', investment: 1840, growth: 4.6, vehicleRegistrations: 35000 },
+      { year: '2022', investment: 2030, growth: 5.2, vehicleRegistrations: 40000 },
+      { year: '2023', investment: 2280, growth: 5.8, vehicleRegistrations: 45000 },
+      { year: '2024', investment: 2560, growth: 6.3, vehicleRegistrations: 50000 },
+      { year: '2025', investment: 2870, growth: 6.9, vehicleRegistrations: 54000 }
+    ]
+  },
+  {
+    city: 'Tirupati',
+    state: 'Andhra Pradesh',
+    cluster: 'Visakhapatnam-Vijayawada',
+    leadSector: 'Mobile Components',
+    currentInvestment: 2760,
+    currentGrowth: 7.2,
+    vehicleRegistrations: 51000,
+    sectorMix: { mobile_components: 35, electronics: 28, hardware_assembly: 21, food_processing: 16 },
+    history: [
+      { year: '2021', investment: 1760, growth: 4.8, vehicleRegistrations: 33000 },
+      { year: '2022', investment: 1960, growth: 5.5, vehicleRegistrations: 38000 },
+      { year: '2023', investment: 2200, growth: 6.1, vehicleRegistrations: 43000 },
+      { year: '2024', investment: 2470, growth: 6.7, vehicleRegistrations: 47000 },
+      { year: '2025', investment: 2760, growth: 7.2, vehicleRegistrations: 51000 }
+    ]
+  },
+  {
+    city: 'Jamshedpur',
+    state: 'Jharkhand',
+    cluster: 'Eastern Metals Belt',
+    leadSector: 'Defense Manufacturing',
+    currentInvestment: 3120,
+    currentGrowth: 6.5,
+    vehicleRegistrations: 56000,
+    sectorMix: { defense_manufacturing: 30, steel: 34, hardware_assembly: 21, chemicals: 15 },
+    history: [
+      { year: '2021', investment: 2020, growth: 4.4, vehicleRegistrations: 36000 },
+      { year: '2022', investment: 2240, growth: 5.0, vehicleRegistrations: 41000 },
+      { year: '2023', investment: 2490, growth: 5.6, vehicleRegistrations: 46000 },
+      { year: '2024', investment: 2790, growth: 6.0, vehicleRegistrations: 51000 },
+      { year: '2025', investment: 3120, growth: 6.5, vehicleRegistrations: 56000 }
+    ]
+  },
+  {
+    city: 'Bhilai',
+    state: 'Chhattisgarh',
+    cluster: 'Eastern Metals Belt',
+    leadSector: 'Steel and Metals',
+    currentInvestment: 3180,
+    currentGrowth: 6.6,
+    vehicleRegistrations: 55000,
+    sectorMix: { steel: 41, defense_manufacturing: 24, chemicals: 19, automotive: 16 },
+    history: [
+      { year: '2021', investment: 2050, growth: 4.5, vehicleRegistrations: 35000 },
+      { year: '2022', investment: 2270, growth: 5.1, vehicleRegistrations: 40000 },
+      { year: '2023', investment: 2530, growth: 5.7, vehicleRegistrations: 45000 },
+      { year: '2024', investment: 2840, growth: 6.1, vehicleRegistrations: 50000 },
+      { year: '2025', investment: 3180, growth: 6.6, vehicleRegistrations: 55000 }
+    ]
+  },
+  {
+    city: 'Dehradun',
+    state: 'Uttarakhand',
+    cluster: 'North Manufacturing Belt',
+    leadSector: 'Pharmaceuticals',
+    currentInvestment: 2950,
+    currentGrowth: 6.8,
+    vehicleRegistrations: 53000,
+    sectorMix: { pharmaceuticals: 34, chemicals: 25, hardware_assembly: 22, food_processing: 19 },
+    history: [
+      { year: '2021', investment: 1900, growth: 4.6, vehicleRegistrations: 34000 },
+      { year: '2022', investment: 2100, growth: 5.2, vehicleRegistrations: 39000 },
+      { year: '2023', investment: 2360, growth: 5.8, vehicleRegistrations: 44000 },
+      { year: '2024', investment: 2640, growth: 6.3, vehicleRegistrations: 49000 },
+      { year: '2025', investment: 2950, growth: 6.8, vehicleRegistrations: 53000 }
+    ]
+  },
+  {
+    city: 'Haridwar',
+    state: 'Uttarakhand',
+    cluster: 'North Manufacturing Belt',
+    leadSector: 'Battery Manufacturing',
+    currentInvestment: 2820,
+    currentGrowth: 7.0,
+    vehicleRegistrations: 51000,
+    sectorMix: { battery_manufacturing: 32, pharmaceuticals: 23, chemicals: 25, hardware_assembly: 20 },
+    history: [
+      { year: '2021', investment: 1790, growth: 4.7, vehicleRegistrations: 33000 },
+      { year: '2022', investment: 1980, growth: 5.4, vehicleRegistrations: 37000 },
+      { year: '2023', investment: 2220, growth: 6.0, vehicleRegistrations: 42000 },
+      { year: '2024', investment: 2510, growth: 6.5, vehicleRegistrations: 47000 },
+      { year: '2025', investment: 2820, growth: 7.0, vehicleRegistrations: 51000 }
+    ]
+  },
+  {
+    city: 'Guwahati',
+    state: 'Assam',
+    cluster: 'North East Growth Arc',
+    leadSector: 'Chemicals',
+    currentInvestment: 2680,
+    currentGrowth: 6.1,
+    vehicleRegistrations: 50000,
+    sectorMix: { chemicals: 33, food_processing: 27, hardware_assembly: 20, textiles: 20 },
+    history: [
+      { year: '2021', investment: 1710, growth: 4.0, vehicleRegistrations: 32000 },
+      { year: '2022', investment: 1890, growth: 4.7, vehicleRegistrations: 37000 },
+      { year: '2023', investment: 2120, growth: 5.3, vehicleRegistrations: 42000 },
+      { year: '2024', investment: 2390, growth: 5.7, vehicleRegistrations: 46000 },
+      { year: '2025', investment: 2680, growth: 6.1, vehicleRegistrations: 50000 }
+    ]
+  },
+  {
+    city: 'Silchar',
+    state: 'Assam',
+    cluster: 'North East Growth Arc',
+    leadSector: 'Food Processing',
+    currentInvestment: 2180,
+    currentGrowth: 5.6,
+    vehicleRegistrations: 42000,
+    sectorMix: { food_processing: 38, textiles: 24, chemicals: 20, hardware_assembly: 18 },
+    history: [
+      { year: '2021', investment: 1420, growth: 3.7, vehicleRegistrations: 27000 },
+      { year: '2022', investment: 1560, growth: 4.3, vehicleRegistrations: 31000 },
+      { year: '2023', investment: 1760, growth: 4.8, vehicleRegistrations: 35000 },
+      { year: '2024', investment: 1960, growth: 5.2, vehicleRegistrations: 39000 },
+      { year: '2025', investment: 2180, growth: 5.6, vehicleRegistrations: 42000 }
+    ]
+  },
+  {
+    city: 'Bhagalpur',
+    state: 'Bihar',
+    cluster: 'Gangetic Manufacturing Belt',
+    leadSector: 'Textiles',
+    currentInvestment: 2270,
+    currentGrowth: 5.7,
+    vehicleRegistrations: 43000,
+    sectorMix: { textiles: 35, food_processing: 28, chemicals: 19, mobile_components: 18 },
+    history: [
+      { year: '2021', investment: 1480, growth: 3.9, vehicleRegistrations: 28000 },
+      { year: '2022', investment: 1640, growth: 4.4, vehicleRegistrations: 32000 },
+      { year: '2023', investment: 1830, growth: 4.9, vehicleRegistrations: 36000 },
+      { year: '2024', investment: 2040, growth: 5.3, vehicleRegistrations: 40000 },
+      { year: '2025', investment: 2270, growth: 5.7, vehicleRegistrations: 43000 }
+    ]
+  },
+  {
+    city: 'Varanasi',
+    state: 'Uttar Pradesh',
+    cluster: 'Kanpur-Lucknow-Noida',
+    leadSector: 'Hardware Assembly',
+    currentInvestment: 3010,
+    currentGrowth: 7.3,
+    vehicleRegistrations: 56000,
+    sectorMix: { hardware_assembly: 33, mobile_components: 26, chemicals: 21, textiles: 20 },
+    history: [
+      { year: '2021', investment: 1920, growth: 4.9, vehicleRegistrations: 36000 },
+      { year: '2022', investment: 2140, growth: 5.6, vehicleRegistrations: 41000 },
+      { year: '2023', investment: 2400, growth: 6.2, vehicleRegistrations: 46000 },
+      { year: '2024', investment: 2690, growth: 6.8, vehicleRegistrations: 51000 },
+      { year: '2025', investment: 3010, growth: 7.3, vehicleRegistrations: 56000 }
+    ]
   }
 ];
 
@@ -817,8 +1123,102 @@ const sectorYearlyRecords = {
     { year: '2023', growth: 4.1, share: 9.7 },
     { year: '2024', growth: 4.8, share: 9.9 },
     { year: '2025', growth: 5.3, share: 10.2 }
+  ],
+  'Battery Manufacturing': [
+    { year: '2021', growth: 9.1, share: 3.8 },
+    { year: '2022', growth: 11.4, share: 4.4 },
+    { year: '2023', growth: 14.2, share: 5.1 },
+    { year: '2024', growth: 16.3, share: 5.9 },
+    { year: '2025', growth: 18.6, share: 6.5 }
+  ],
+  'Mobile Components': [
+    { year: '2021', growth: 8.8, share: 3.1 },
+    { year: '2022', growth: 10.2, share: 3.5 },
+    { year: '2023', growth: 11.9, share: 4.0 },
+    { year: '2024', growth: 13.5, share: 4.5 },
+    { year: '2025', growth: 15.1, share: 5.0 }
+  ],
+  'Hardware Assembly': [
+    { year: '2021', growth: 7.2, share: 3.0 },
+    { year: '2022', growth: 8.4, share: 3.3 },
+    { year: '2023', growth: 9.7, share: 3.8 },
+    { year: '2024', growth: 11.0, share: 4.2 },
+    { year: '2025', growth: 12.6, share: 4.7 }
+  ],
+  'Defense Manufacturing': [
+    { year: '2021', growth: 6.7, share: 2.5 },
+    { year: '2022', growth: 7.9, share: 2.8 },
+    { year: '2023', growth: 9.4, share: 3.2 },
+    { year: '2024', growth: 10.8, share: 3.7 },
+    { year: '2025', growth: 12.0, share: 4.1 }
+  ],
+  Shipbuilding: [
+    { year: '2021', growth: 5.4, share: 2.0 },
+    { year: '2022', growth: 6.3, share: 2.3 },
+    { year: '2023', growth: 7.2, share: 2.7 },
+    { year: '2024', growth: 8.2, share: 3.0 },
+    { year: '2025', growth: 9.3, share: 3.5 }
   ]
 };
+
+Object.assign(sectorYearlyRecords, {
+  'Engineering Goods': [
+    { year: '2021', growth: 4.8, share: 3.2 },
+    { year: '2022', growth: 5.5, share: 3.4 },
+    { year: '2023', growth: 6.1, share: 3.6 },
+    { year: '2024', growth: 6.8, share: 3.8 },
+    { year: '2025', growth: 7.4, share: 4.0 }
+  ],
+  Aerospace: [
+    { year: '2021', growth: 7.1, share: 1.7 },
+    { year: '2022', growth: 8.0, share: 1.8 },
+    { year: '2023', growth: 8.9, share: 1.9 },
+    { year: '2024', growth: 9.7, share: 2.0 },
+    { year: '2025', growth: 10.6, share: 2.2 }
+  ],
+  'Renewable Equipment': [
+    { year: '2021', growth: 8.4, share: 2.2 },
+    { year: '2022', growth: 9.5, share: 2.4 },
+    { year: '2023', growth: 10.8, share: 2.7 },
+    { year: '2024', growth: 12.1, share: 3.0 },
+    { year: '2025', growth: 13.4, share: 3.3 }
+  ],
+  'Industrial Machinery': [
+    { year: '2021', growth: 4.5, share: 2.3 },
+    { year: '2022', growth: 5.0, share: 2.4 },
+    { year: '2023', growth: 5.7, share: 2.6 },
+    { year: '2024', growth: 6.3, share: 2.7 },
+    { year: '2025', growth: 6.9, share: 2.9 }
+  ],
+  'Medical Devices': [
+    { year: '2021', growth: 7.3, share: 1.8 },
+    { year: '2022', growth: 8.2, share: 1.9 },
+    { year: '2023', growth: 9.0, share: 2.1 },
+    { year: '2024', growth: 9.9, share: 2.3 },
+    { year: '2025', growth: 10.7, share: 2.5 }
+  ],
+  Semiconductors: [
+    { year: '2021', growth: 10.4, share: 0.8 },
+    { year: '2022', growth: 11.9, share: 1.0 },
+    { year: '2023', growth: 13.7, share: 1.2 },
+    { year: '2024', growth: 15.6, share: 1.4 },
+    { year: '2025', growth: 17.4, share: 1.7 }
+  ],
+  'Ceramics & Building Materials': [
+    { year: '2021', growth: 4.0, share: 3.0 },
+    { year: '2022', growth: 4.5, share: 3.1 },
+    { year: '2023', growth: 5.1, share: 3.2 },
+    { year: '2024', growth: 5.8, share: 3.4 },
+    { year: '2025', growth: 6.5, share: 3.6 }
+  ],
+  'Packaging & Paper': [
+    { year: '2021', growth: 4.2, share: 2.3 },
+    { year: '2022', growth: 4.8, share: 2.4 },
+    { year: '2023', growth: 5.5, share: 2.6 },
+    { year: '2024', growth: 6.1, share: 2.7 },
+    { year: '2025', growth: 6.8, share: 2.9 }
+  ]
+});
 
 const sectorProductAnalysis = {
   Automotive: {
@@ -918,7 +1318,9 @@ const sectorProductAnalysis = {
       { name: 'Cotton Yarn', domestic: 1880, exports: 620, growth: 2.9, topStates: ['Gujarat', 'Maharashtra', 'Tamil Nadu'] },
       { name: 'Synthetic Fabrics', domestic: 1740, exports: 430, growth: 5.8, topStates: ['Gujarat', 'Maharashtra', 'Rajasthan'] },
       { name: 'Technical Textiles', domestic: 920, exports: 250, growth: 9.7, topStates: ['Maharashtra', 'Tamil Nadu', 'Karnataka'] },
-      { name: 'Garment Accessories', domestic: 900, exports: 200, growth: 4.5, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Punjab'] }
+      { name: 'Garment Accessories', domestic: 900, exports: 200, growth: 4.5, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Punjab'] },
+      { name: 'MMF Apparel', domestic: 810, exports: 240, growth: 8.9, topStates: ['Tamil Nadu', 'Gujarat', 'Karnataka'] },
+      { name: 'Industrial Fabrics', domestic: 760, exports: 210, growth: 9.4, topStates: ['Maharashtra', 'Tamil Nadu', 'Gujarat'] }
     ]
   },
   Chemicals: {
@@ -943,7 +1345,134 @@ const sectorProductAnalysis = {
       { name: 'Agrochemicals', domestic: 2460, exports: 1220, growth: 7.8, topStates: ['Gujarat', 'Maharashtra', 'Madhya Pradesh'] },
       { name: 'Industrial Gases', domestic: 3180, exports: 390, growth: 6.6, topStates: ['Odisha', 'Tamil Nadu', 'Chhattisgarh'] },
       { name: 'Dyes & Pigments', domestic: 1710, exports: 980, growth: 8.9, topStates: ['Gujarat', 'Rajasthan', 'Maharashtra'] },
-      { name: 'Fertilizer Intermediates', domestic: 3130, exports: 700, growth: 5.9, topStates: ['Gujarat', 'Uttar Pradesh', 'Andhra Pradesh'] }
+      { name: 'Fertilizer Intermediates', domestic: 3130, exports: 700, growth: 5.9, topStates: ['Gujarat', 'Uttar Pradesh', 'Andhra Pradesh'] },
+      { name: 'Battery Chemicals', domestic: 1180, exports: 520, growth: 14.3, topStates: ['Gujarat', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'Electronic Chemicals', domestic: 970, exports: 440, growth: 12.8, topStates: ['Karnataka', 'Tamil Nadu', 'Telangana'] }
+    ]
+  },
+  'Battery Manufacturing': {
+    unit: 'MWh packs',
+    domesticLabel: 'Domestic deployment',
+    exportLabel: 'Exports',
+    insights: [
+      'Cell manufacturing capacity is shifting from pilot lines to giga-scale commissioning across western and southern corridors.',
+      'LFP chemistry dominates domestic EV and stationary demand, while NMC remains export-led for premium applications.',
+      'Battery pack assembly is scaling fastest in states that already host automotive and electronics clusters.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 12400, exports: 1120 },
+      { year: '2022', domestic: 14980, exports: 1460 },
+      { year: '2023', domestic: 18220, exports: 1930 },
+      { year: '2024', domestic: 21940, exports: 2510 },
+      { year: '2025', domestic: 26480, exports: 3240 }
+    ],
+    products: [
+      { name: 'LFP Cells', domestic: 8420, exports: 980, growth: 21.6, topStates: ['Gujarat', 'Tamil Nadu', 'Karnataka'] },
+      { name: 'NMC Cells', domestic: 4210, exports: 1180, growth: 17.8, topStates: ['Maharashtra', 'Tamil Nadu', 'Telangana'] },
+      { name: 'Battery Packs', domestic: 9230, exports: 620, growth: 19.4, topStates: ['Tamil Nadu', 'Karnataka', 'Uttar Pradesh'] },
+      { name: 'BMS Units', domestic: 3120, exports: 380, growth: 16.2, topStates: ['Karnataka', 'Telangana', 'Maharashtra'] },
+      { name: 'Anode Material', domestic: 2140, exports: 420, growth: 14.8, topStates: ['Gujarat', 'Odisha', 'Andhra Pradesh'] },
+      { name: 'Cathode Material', domestic: 2350, exports: 510, growth: 15.3, topStates: ['Gujarat', 'Tamil Nadu', 'Odisha'] }
+    ]
+  },
+  'Mobile Components': {
+    unit: 'mn units',
+    domesticLabel: 'Domestic consumption',
+    exportLabel: 'Exports',
+    insights: [
+      'Display modules and camera modules are the fastest localizing component lines under PLI-linked capacity additions.',
+      'PCB assembly throughput is rising with deeper domestic value addition beyond final handset assembly.',
+      'Import intensity remains highest for premium chipsets, but local packaging and testing capacity is improving.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 1840, exports: 220 },
+      { year: '2022', domestic: 2120, exports: 280 },
+      { year: '2023', domestic: 2440, exports: 360 },
+      { year: '2024', domestic: 2810, exports: 470 },
+      { year: '2025', domestic: 3260, exports: 620 }
+    ],
+    products: [
+      { name: 'Display Modules', domestic: 690, exports: 140, growth: 16.7, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Karnataka'] },
+      { name: 'Camera Modules', domestic: 520, exports: 110, growth: 17.2, topStates: ['Tamil Nadu', 'Karnataka', 'Telangana'] },
+      { name: 'PCB Assemblies', domestic: 740, exports: 160, growth: 14.6, topStates: ['Karnataka', 'Tamil Nadu', 'Maharashtra'] },
+      { name: 'Chargers & Adapters', domestic: 580, exports: 90, growth: 12.8, topStates: ['Uttar Pradesh', 'Tamil Nadu', 'Haryana'] },
+      { name: 'Mechanical Enclosures', domestic: 420, exports: 70, growth: 11.4, topStates: ['Uttar Pradesh', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'RF Sub-assemblies', domestic: 310, exports: 50, growth: 13.3, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] }
+    ]
+  },
+  'Hardware Assembly': {
+    unit: 'mn units',
+    domesticLabel: 'Domestic assembly',
+    exportLabel: 'Exports',
+    insights: [
+      'IT hardware assembly is expanding beyond metro clusters with stronger supplier ecosystems in tier-2 cities.',
+      'Server and networking hardware lines are moving toward higher test and calibration localization.',
+      'Peripheral manufacturing remains cost-competitive and is increasingly export-linked via OEM contracts.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 1280, exports: 160 },
+      { year: '2022', domestic: 1420, exports: 190 },
+      { year: '2023', domestic: 1590, exports: 230 },
+      { year: '2024', domestic: 1780, exports: 290 },
+      { year: '2025', domestic: 2010, exports: 360 }
+    ],
+    products: [
+      { name: 'Laptops & PCs', domestic: 620, exports: 130, growth: 12.9, topStates: ['Tamil Nadu', 'Karnataka', 'Uttar Pradesh'] },
+      { name: 'Servers', domestic: 190, exports: 70, growth: 15.2, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] },
+      { name: 'Network Routers', domestic: 240, exports: 60, growth: 13.7, topStates: ['Tamil Nadu', 'Telangana', 'Karnataka'] },
+      { name: 'Set-top Boxes', domestic: 330, exports: 40, growth: 9.8, topStates: ['Uttar Pradesh', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'POS & Kiosk Systems', domestic: 280, exports: 35, growth: 11.5, topStates: ['Maharashtra', 'Karnataka', 'Haryana'] },
+      { name: 'Peripherals', domestic: 350, exports: 55, growth: 10.4, topStates: ['Tamil Nadu', 'Uttar Pradesh', 'Gujarat'] }
+    ]
+  },
+  'Defense Manufacturing': {
+    unit: 'index units',
+    domesticLabel: 'Domestic procurement',
+    exportLabel: 'Exports',
+    insights: [
+      'Aerospace structures and defense electronics are driving the strongest value-add in private manufacturing participation.',
+      'Munitions and armored systems are showing steady localization under long-cycle procurement pipelines.',
+      'Export momentum is improving as domestic players enter subsystem supply chains for global primes.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 760, exports: 90 },
+      { year: '2022', domestic: 840, exports: 110 },
+      { year: '2023', domestic: 940, exports: 135 },
+      { year: '2024', domestic: 1060, exports: 165 },
+      { year: '2025', domestic: 1190, exports: 205 }
+    ],
+    products: [
+      { name: 'Aerospace Structures', domestic: 210, exports: 56, growth: 14.2, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] },
+      { name: 'Defense Electronics', domestic: 280, exports: 48, growth: 13.1, topStates: ['Karnataka', 'Maharashtra', 'Telangana'] },
+      { name: 'Armored Systems', domestic: 140, exports: 18, growth: 9.7, topStates: ['Maharashtra', 'Gujarat', 'Tamil Nadu'] },
+      { name: 'Naval Systems', domestic: 90, exports: 22, growth: 10.8, topStates: ['Andhra Pradesh', 'Kerala', 'Gujarat'] },
+      { name: 'Munitions', domestic: 300, exports: 44, growth: 12.6, topStates: ['Maharashtra', 'Uttar Pradesh', 'Odisha'] },
+      { name: 'Radar Systems', domestic: 170, exports: 17, growth: 11.3, topStates: ['Karnataka', 'Telangana', 'Uttar Pradesh'] }
+    ]
+  },
+  Shipbuilding: {
+    unit: 'k DWT',
+    domesticLabel: 'Domestic builds',
+    exportLabel: 'Exports',
+    insights: [
+      'Commercial vessel and offshore support vessel orders are rebuilding capacity utilization in major coastal yards.',
+      'Repair and retrofitting lines are creating stable cash flows while new-build cycles recover.',
+      'Component localization in propulsion and hull systems is improving, but high-spec equipment is still import-reliant.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 980, exports: 180 },
+      { year: '2022', domestic: 1080, exports: 210 },
+      { year: '2023', domestic: 1210, exports: 250 },
+      { year: '2024', domestic: 1360, exports: 300 },
+      { year: '2025', domestic: 1520, exports: 360 }
+    ],
+    products: [
+      { name: 'Commercial Vessels', domestic: 520, exports: 130, growth: 9.9, topStates: ['Gujarat', 'Andhra Pradesh', 'Tamil Nadu'] },
+      { name: 'Offshore Support Vessels', domestic: 260, exports: 95, growth: 11.6, topStates: ['Gujarat', 'Kerala', 'Goa'] },
+      { name: 'Coastal Cargo Ships', domestic: 310, exports: 45, growth: 8.8, topStates: ['Andhra Pradesh', 'Tamil Nadu', 'Odisha'] },
+      { name: 'Defense Vessels', domestic: 180, exports: 35, growth: 10.2, topStates: ['Andhra Pradesh', 'Gujarat', 'Karnataka'] },
+      { name: 'Ship Repair & Retrofit', domestic: 390, exports: 28, growth: 9.1, topStates: ['Kerala', 'Goa', 'Maharashtra'] },
+      { name: 'Marine Components', domestic: 270, exports: 52, growth: 10.9, topStates: ['Tamil Nadu', 'Gujarat', 'Karnataka'] }
     ]
   },
   'Food Processing': {
@@ -998,6 +1527,209 @@ const sectorProductAnalysis = {
   }
 };
 
+Object.assign(sectorProductAnalysis, {
+  'Engineering Goods': {
+    unit: 'k units',
+    domesticLabel: 'Domestic dispatches',
+    exportLabel: 'Exports',
+    insights: [
+      'Precision castings, pumps and valves remain the core export-oriented lines within engineering goods.',
+      'SME supplier clusters are increasingly plugged into energy, process and industrial automation capex cycles.',
+      'Western India still dominates output, but central and northern clusters are gaining share in machinery components.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 5420, exports: 1410 },
+      { year: '2022', domestic: 5780, exports: 1530 },
+      { year: '2023', domestic: 6190, exports: 1680 },
+      { year: '2024', domestic: 6670, exports: 1840 },
+      { year: '2025', domestic: 7210, exports: 2020 }
+    ],
+    products: [
+      { name: 'Pumps & Valves', domestic: 1280, exports: 360, growth: 7.9, topStates: ['Gujarat', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'Industrial Castings', domestic: 1460, exports: 280, growth: 6.8, topStates: ['Gujarat', 'Punjab', 'Maharashtra'] },
+      { name: 'Bearings', domestic: 980, exports: 310, growth: 7.1, topStates: ['Tamil Nadu', 'Karnataka', 'Maharashtra'] },
+      { name: 'Process Equipment', domestic: 1240, exports: 420, growth: 8.4, topStates: ['Gujarat', 'Maharashtra', 'Andhra Pradesh'] },
+      { name: 'Industrial Fasteners', domestic: 1130, exports: 190, growth: 6.5, topStates: ['Punjab', 'Haryana', 'Rajasthan'] },
+      { name: 'Precision Components', domestic: 1120, exports: 460, growth: 8.9, topStates: ['Karnataka', 'Tamil Nadu', 'Gujarat'] }
+    ]
+  },
+  Aerospace: {
+    unit: 'index units',
+    domesticLabel: 'Domestic output',
+    exportLabel: 'Exports',
+    insights: [
+      'Aerospace structures and engine components are seeing the fastest private-sector scale-up.',
+      'Export participation is concentrated in high-precision machining, avionics subassemblies and composites.',
+      'Defense spillovers are creating supplier depth in southern aerospace corridors.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 580, exports: 170 },
+      { year: '2022', domestic: 640, exports: 190 },
+      { year: '2023', domestic: 710, exports: 220 },
+      { year: '2024', domestic: 790, exports: 255 },
+      { year: '2025', domestic: 880, exports: 295 }
+    ],
+    products: [
+      { name: 'Aerostructures', domestic: 170, exports: 76, growth: 11.2, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] },
+      { name: 'Engine Components', domestic: 120, exports: 58, growth: 10.6, topStates: ['Karnataka', 'Maharashtra', 'Tamil Nadu'] },
+      { name: 'Avionics Modules', domestic: 90, exports: 42, growth: 12.4, topStates: ['Telangana', 'Karnataka', 'Maharashtra'] },
+      { name: 'Composites', domestic: 70, exports: 30, growth: 9.8, topStates: ['Tamil Nadu', 'Karnataka', 'Gujarat'] },
+      { name: 'Landing Gear Parts', domestic: 60, exports: 21, growth: 8.7, topStates: ['Karnataka', 'Haryana', 'Tamil Nadu'] },
+      { name: 'Cabin Assemblies', domestic: 110, exports: 68, growth: 10.9, topStates: ['Telangana', 'Tamil Nadu', 'Karnataka'] }
+    ]
+  },
+  'Renewable Equipment': {
+    unit: 'MW equivalent',
+    domesticLabel: 'Domestic deployment',
+    exportLabel: 'Exports',
+    insights: [
+      'Solar module and inverter capacity is deepening faster than upstream wafer and cell integration.',
+      'Wind equipment remains concentrated in a few coastal states but the supplier ecosystem is broadening.',
+      'Grid equipment and storage-linked systems are increasingly bundled into renewable manufacturing pipelines.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 12200, exports: 1360 },
+      { year: '2022', domestic: 13840, exports: 1580 },
+      { year: '2023', domestic: 15710, exports: 1860 },
+      { year: '2024', domestic: 17940, exports: 2230 },
+      { year: '2025', domestic: 20520, exports: 2680 }
+    ],
+    products: [
+      { name: 'Solar Modules', domestic: 8420, exports: 920, growth: 14.1, topStates: ['Gujarat', 'Tamil Nadu', 'Rajasthan'] },
+      { name: 'Solar Cells', domestic: 3140, exports: 520, growth: 16.8, topStates: ['Gujarat', 'Tamil Nadu', 'Andhra Pradesh'] },
+      { name: 'Inverters', domestic: 2260, exports: 340, growth: 12.6, topStates: ['Karnataka', 'Tamil Nadu', 'Telangana'] },
+      { name: 'Wind Turbine Components', domestic: 2840, exports: 460, growth: 11.5, topStates: ['Tamil Nadu', 'Gujarat', 'Karnataka'] },
+      { name: 'Trackers & Structures', domestic: 2650, exports: 230, growth: 10.8, topStates: ['Rajasthan', 'Gujarat', 'Maharashtra'] },
+      { name: 'Grid BOS Equipment', domestic: 1210, exports: 210, growth: 9.9, topStates: ['Maharashtra', 'Karnataka', 'Gujarat'] }
+    ]
+  },
+  'Industrial Machinery': {
+    unit: 'k machines',
+    domesticLabel: 'Domestic sales',
+    exportLabel: 'Exports',
+    insights: [
+      'Machine tools and automation systems are recovering with manufacturing capex and industrial digitalization.',
+      'Textile and food-processing machinery remain strong mid-market export categories.',
+      'Industrial machinery demand tracks the capex cycle more closely than consumer-led sectors.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 2480, exports: 420 },
+      { year: '2022', domestic: 2630, exports: 460 },
+      { year: '2023', domestic: 2810, exports: 510 },
+      { year: '2024', domestic: 3030, exports: 570 },
+      { year: '2025', domestic: 3270, exports: 640 }
+    ],
+    products: [
+      { name: 'Machine Tools', domestic: 680, exports: 120, growth: 7.4, topStates: ['Karnataka', 'Maharashtra', 'Punjab'] },
+      { name: 'Textile Machinery', domestic: 530, exports: 110, growth: 6.7, topStates: ['Tamil Nadu', 'Gujarat', 'Punjab'] },
+      { name: 'Food Processing Machinery', domestic: 620, exports: 90, growth: 7.9, topStates: ['Maharashtra', 'Karnataka', 'Uttar Pradesh'] },
+      { name: 'Packaging Machinery', domestic: 460, exports: 80, growth: 6.8, topStates: ['Maharashtra', 'Gujarat', 'Haryana'] },
+      { name: 'Automation Systems', domestic: 410, exports: 130, growth: 8.6, topStates: ['Karnataka', 'Tamil Nadu', 'Maharashtra'] },
+      { name: 'Boilers & Process Plants', domestic: 570, exports: 110, growth: 6.4, topStates: ['Gujarat', 'Andhra Pradesh', 'Madhya Pradesh'] }
+    ]
+  },
+  'Medical Devices': {
+    unit: 'mn units',
+    domesticLabel: 'Domestic demand',
+    exportLabel: 'Exports',
+    insights: [
+      'Consumables still dominate volumes, but imaging and diagnostics carry the strongest value-add potential.',
+      'Domestic hospital capex and diagnostics penetration are supporting a broad-based scale-up.',
+      'Export growth is strongest in disposables, diagnostics kits and select monitor/device assemblies.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 1680, exports: 340 },
+      { year: '2022', domestic: 1810, exports: 380 },
+      { year: '2023', domestic: 1960, exports: 430 },
+      { year: '2024', domestic: 2130, exports: 490 },
+      { year: '2025', domestic: 2310, exports: 560 }
+    ],
+    products: [
+      { name: 'Syringes & Consumables', domestic: 620, exports: 170, growth: 8.8, topStates: ['Haryana', 'Tamil Nadu', 'Uttarakhand'] },
+      { name: 'Diagnostics Kits', domestic: 340, exports: 110, growth: 11.4, topStates: ['Telangana', 'Maharashtra', 'Karnataka'] },
+      { name: 'Patient Monitors', domestic: 220, exports: 60, growth: 9.9, topStates: ['Karnataka', 'Tamil Nadu', 'Maharashtra'] },
+      { name: 'Implants', domestic: 180, exports: 55, growth: 10.3, topStates: ['Tamil Nadu', 'Haryana', 'Gujarat'] },
+      { name: 'Imaging Subsystems', domestic: 260, exports: 82, growth: 12.1, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] },
+      { name: 'Home Care Devices', domestic: 690, exports: 83, growth: 10.8, topStates: ['Maharashtra', 'Uttar Pradesh', 'Tamil Nadu'] }
+    ]
+  },
+  Semiconductors: {
+    unit: 'mn chips',
+    domesticLabel: 'Domestic output',
+    exportLabel: 'Exports',
+    insights: [
+      'The sector remains small in share but has the highest strategic importance due to import substitution potential.',
+      'OSAT, chip packaging and design-linked manufacturing services are the first scalable layers.',
+      'High-end fabrication remains pipeline-driven, but ancillary chemical and substrate ecosystems are emerging.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 420, exports: 35 },
+      { year: '2022', domestic: 510, exports: 48 },
+      { year: '2023', domestic: 620, exports: 62 },
+      { year: '2024', domestic: 760, exports: 84 },
+      { year: '2025', domestic: 930, exports: 112 }
+    ],
+    products: [
+      { name: 'OSAT Packages', domestic: 210, exports: 30, growth: 18.5, topStates: ['Gujarat', 'Karnataka', 'Telangana'] },
+      { name: 'Compound Semiconductors', domestic: 90, exports: 18, growth: 15.6, topStates: ['Karnataka', 'Tamil Nadu', 'Gujarat'] },
+      { name: 'Power Devices', domestic: 150, exports: 20, growth: 16.9, topStates: ['Gujarat', 'Tamil Nadu', 'Maharashtra'] },
+      { name: 'Sensor Chips', domestic: 130, exports: 12, growth: 14.4, topStates: ['Karnataka', 'Telangana', 'Tamil Nadu'] },
+      { name: 'Packaging Substrates', domestic: 180, exports: 16, growth: 15.1, topStates: ['Gujarat', 'Karnataka', 'Andhra Pradesh'] },
+      { name: 'Testing Services', domestic: 170, exports: 16, growth: 13.7, topStates: ['Telangana', 'Karnataka', 'Tamil Nadu'] }
+    ]
+  },
+  'Ceramics & Building Materials': {
+    unit: 'k tonnes',
+    domesticLabel: 'Domestic demand',
+    exportLabel: 'Exports',
+    insights: [
+      'Tiles and sanitaryware remain the largest lines, with glass and advanced ceramics gaining industrial relevance.',
+      'Construction-linked offtake provides stability, while premium exports are strongest in tiles and sanitaryware.',
+      'Energy intensity remains the key margin variable across building material subsegments.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 12840, exports: 1180 },
+      { year: '2022', domestic: 13380, exports: 1240 },
+      { year: '2023', domestic: 14010, exports: 1330 },
+      { year: '2024', domestic: 14720, exports: 1440 },
+      { year: '2025', domestic: 15510, exports: 1580 }
+    ],
+    products: [
+      { name: 'Ceramic Tiles', domestic: 4820, exports: 620, growth: 7.2, topStates: ['Gujarat', 'Rajasthan', 'Tamil Nadu'] },
+      { name: 'Sanitaryware', domestic: 1630, exports: 280, growth: 6.4, topStates: ['Rajasthan', 'Gujarat', 'Uttar Pradesh'] },
+      { name: 'Glass Products', domestic: 2460, exports: 190, growth: 5.9, topStates: ['Uttar Pradesh', 'Gujarat', 'Maharashtra'] },
+      { name: 'Cement Products', domestic: 3120, exports: 80, growth: 5.1, topStates: ['Rajasthan', 'Madhya Pradesh', 'Chhattisgarh'] },
+      { name: 'Refractories', domestic: 1840, exports: 210, growth: 6.8, topStates: ['Odisha', 'Jharkhand', 'Chhattisgarh'] },
+      { name: 'Advanced Ceramics', domestic: 1640, exports: 200, growth: 8.3, topStates: ['Tamil Nadu', 'Karnataka', 'Gujarat'] }
+    ]
+  },
+  'Packaging & Paper': {
+    unit: 'k tonnes',
+    domesticLabel: 'Domestic conversion',
+    exportLabel: 'Exports',
+    insights: [
+      'FMCG, e-commerce and pharma demand continue to support corrugated and flexible packaging volumes.',
+      'Sustainability regulation is accelerating paper substitution and recyclable substrate investment.',
+      'Higher-value export opportunities remain concentrated in specialty paper and barrier packaging.'
+    ],
+    yearly: [
+      { year: '2021', domestic: 9240, exports: 1180 },
+      { year: '2022', domestic: 9630, exports: 1240 },
+      { year: '2023', domestic: 10090, exports: 1330 },
+      { year: '2024', domestic: 10620, exports: 1440 },
+      { year: '2025', domestic: 11190, exports: 1580 }
+    ],
+    products: [
+      { name: 'Corrugated Packaging', domestic: 3240, exports: 180, growth: 6.7, topStates: ['Maharashtra', 'Gujarat', 'Tamil Nadu'] },
+      { name: 'Flexible Packaging', domestic: 2480, exports: 310, growth: 7.3, topStates: ['Gujarat', 'Maharashtra', 'Haryana'] },
+      { name: 'Specialty Paper', domestic: 1210, exports: 420, growth: 8.1, topStates: ['Punjab', 'Uttarakhand', 'Gujarat'] },
+      { name: 'Cartons & Labels', domestic: 1930, exports: 240, growth: 6.4, topStates: ['Tamil Nadu', 'Maharashtra', 'Haryana'] },
+      { name: 'Industrial Paperboard', domestic: 1360, exports: 230, growth: 5.9, topStates: ['Punjab', 'Gujarat', 'Maharashtra'] },
+      { name: 'Barrier Packaging', domestic: 970, exports: 200, growth: 8.7, topStates: ['Gujarat', 'Tamil Nadu', 'Maharashtra'] }
+    ]
+  }
+});
+
 const sectorReportingProfiles = {
   Automotive: {
     primaryAgency: 'SIAM',
@@ -1034,6 +1766,41 @@ const sectorReportingProfiles = {
     methodology: 'Category lines separate specialty chemicals, petrochemicals and industrial intermediates.',
     benchmarkSeries: 'Specialty, petrochemicals, agrochemicals and industrial gases'
   },
+  'Battery Manufacturing': {
+    primaryAgency: 'Ministry of Heavy Industries',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly capacity utilization and quarterly export tracking',
+    methodology: 'Cell, pack and chemistry material lines are tracked separately across EV and stationary segments.',
+    benchmarkSeries: 'Cell chemistries, pack assembly, BMS and active materials'
+  },
+  'Mobile Components': {
+    primaryAgency: 'MeitY / PLI PMA',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly production dashboard and quarterly trade updates',
+    methodology: 'Component categories disaggregate modules and PCB assembly from final handset manufacturing.',
+    benchmarkSeries: 'Display, camera, PCB, chargers and RF modules'
+  },
+  'Hardware Assembly': {
+    primaryAgency: 'MeitY',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly assembly reporting and quarterly export benchmarking',
+    methodology: 'IT and network hardware output split between domestic assembly and export shipments.',
+    benchmarkSeries: 'PCs, servers, networking, peripherals and kiosks'
+  },
+  'Defense Manufacturing': {
+    primaryAgency: 'Department of Defence Production',
+    exportAgency: 'DGCI&S',
+    cadence: 'Quarterly procurement and export performance updates',
+    methodology: 'Procurement-driven domestic output and export deliveries benchmarked by defense platform categories.',
+    benchmarkSeries: 'Aerospace, electronics, munitions and naval systems'
+  },
+  Shipbuilding: {
+    primaryAgency: 'Ministry of Ports, Shipping and Waterways',
+    exportAgency: 'DGCI&S',
+    cadence: 'Quarterly vessel output and export benchmarking',
+    methodology: 'Domestic builds, exports and retrofit output tracked by vessel class and yard utilization.',
+    benchmarkSeries: 'Commercial vessels, offshore support, naval builds and marine components'
+  },
   'Food Processing': {
     primaryAgency: 'MoFPI',
     exportAgency: 'APEDA',
@@ -1049,6 +1816,65 @@ const sectorReportingProfiles = {
     benchmarkSeries: 'Flat steel, long steel, aluminium, stainless and engineering alloys'
   }
 };
+
+Object.assign(sectorReportingProfiles, {
+  'Engineering Goods': {
+    primaryAgency: 'Department for Promotion of Industry and Internal Trade',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly industrial dispatches and quarterly export benchmarking',
+    methodology: 'Engineering product families benchmark domestic dispatches separately from export realizations.',
+    benchmarkSeries: 'Pumps, valves, castings, bearings and process equipment'
+  },
+  Aerospace: {
+    primaryAgency: 'Department of Defence Production',
+    exportAgency: 'DGCI&S',
+    cadence: 'Quarterly aerospace manufacturing and export review',
+    methodology: 'Domestic aerospace output and export participation mapped by structures, engines and avionics subsystems.',
+    benchmarkSeries: 'Aerostructures, engines, avionics and composites'
+  },
+  'Renewable Equipment': {
+    primaryAgency: 'Ministry of New and Renewable Energy',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly deployment-linked production and quarterly trade review',
+    methodology: 'Solar, wind and balance-of-system output measured in MW-equivalent and export shipments.',
+    benchmarkSeries: 'Modules, cells, inverters, wind components and grid BOS'
+  },
+  'Industrial Machinery': {
+    primaryAgency: 'Department of Heavy Industry',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly machinery output and quarterly export review',
+    methodology: 'Machinery classes grouped by end-use industries and tracked across domestic sales and exports.',
+    benchmarkSeries: 'Machine tools, automation, packaging and process machinery'
+  },
+  'Medical Devices': {
+    primaryAgency: 'Department of Pharmaceuticals / National Medical Devices Policy tracker',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly device production and quarterly export review',
+    methodology: 'Consumables, diagnostics and device assemblies tracked across domestic demand and export shipments.',
+    benchmarkSeries: 'Consumables, diagnostics, implants, imaging and monitors'
+  },
+  Semiconductors: {
+    primaryAgency: 'India Semiconductor Mission',
+    exportAgency: 'DGCI&S',
+    cadence: 'Quarterly project and output benchmarking',
+    methodology: 'Output and project tracking emphasize OSAT, power devices, substrates and ancillary semiconductor manufacturing.',
+    benchmarkSeries: 'OSAT, compound semis, power devices, sensors and testing'
+  },
+  'Ceramics & Building Materials': {
+    primaryAgency: 'Department for Promotion of Industry and Internal Trade',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly output and quarterly export benchmarking',
+    methodology: 'Construction-linked and industrial ceramic lines benchmark domestic offtake separately from exports.',
+    benchmarkSeries: 'Tiles, sanitaryware, glass, refractories and advanced ceramics'
+  },
+  'Packaging & Paper': {
+    primaryAgency: 'DPIIT / Industry packaging forums',
+    exportAgency: 'DGCI&S',
+    cadence: 'Monthly conversion output and quarterly trade review',
+    methodology: 'Packaging substrates and paper products benchmark domestic conversion and export volumes by product line.',
+    benchmarkSeries: 'Corrugated, flexible, paperboard, specialty paper and labels'
+  }
+});
 
 const stateProductLeadership = Object.entries(sectorProductAnalysis).reduce((accumulator, [sectorName, sectorAnalysis]) => {
   sectorAnalysis.products.forEach((product) => {
@@ -1090,23 +1916,23 @@ Object.keys(stateProductLeadership).forEach((stateName) => {
 });
 
 const states = [
-  { state: 'Gujarat', growth: 7.8, rank: 1, investment: 28450, vehicleRegistrations: 245000, portfolio: { automotive: 35, electronics: 30, pharma: 20, other: 15 }, mainCities: ['Ahmedabad', 'Vadodara', 'Surat', 'Rajkot', 'Bhavnagar', 'Anand'] },
-  { state: 'Maharashtra', growth: 6.9, rank: 2, investment: 26890, vehicleRegistrations: 385000, portfolio: { automotive: 28, pharma: 32, chemicals: 25, other: 15 }, mainCities: ['Mumbai', 'Pune', 'Nashik', 'Aurangabad', 'Nagpur', 'Kolhapur'] },
-  { state: 'Tamil Nadu', growth: 6.2, rank: 3, investment: 24560, vehicleRegistrations: 320000, portfolio: { textiles: 40, electronics: 35, auto: 15, other: 10 }, mainCities: ['Chennai', 'Coimbatore', 'Tiruppur', 'Madurai', 'Hosur', 'Trichy'] },
-  { state: 'Uttar Pradesh', growth: 8.5, rank: 4, investment: 22340, vehicleRegistrations: 215000, portfolio: { sugar: 30, chemicals: 25, autos: 20, other: 25 }, mainCities: ['Kanpur', 'Lucknow', 'Noida', 'Varanasi', 'Ghaziabad', 'Agra'] },
-  { state: 'Karnataka', growth: 9.1, rank: 5, investment: 21780, vehicleRegistrations: 295000, portfolio: { electronics: 45, auto: 25, pharma: 20, other: 10 }, mainCities: ['Bangalore', 'Belgaum', 'Hubballi', 'Mangalore', 'Mysuru', 'Tumakuru'] },
-  { state: 'Telangana', growth: 7.3, rank: 6, investment: 19450, vehicleRegistrations: 410000, portfolio: { pharma: 50, textiles: 25, auto: 15, other: 10 }, mainCities: ['Hyderabad', 'Warangal', 'Nizamabad', 'Vikarabad', 'Khammam', 'Karimnagar'] },
+  { state: 'Gujarat', growth: 7.8, rank: 1, investment: 28450, vehicleRegistrations: 245000, portfolio: { automotive: 26, electronics: 21, pharma: 13, chemicals: 12, battery_manufacturing: 11, mobile_components: 6, hardware_assembly: 5, shipbuilding: 4, defense_manufacturing: 2 }, mainCities: ['Ahmedabad', 'Vadodara', 'Surat', 'Rajkot', 'Bhavnagar', 'Anand'] },
+  { state: 'Maharashtra', growth: 6.9, rank: 2, investment: 26890, vehicleRegistrations: 385000, portfolio: { automotive: 23, pharma: 24, chemicals: 19, electronics: 11, battery_manufacturing: 8, hardware_assembly: 7, mobile_components: 4, defense_manufacturing: 4 }, mainCities: ['Mumbai', 'Pune', 'Nashik', 'Aurangabad', 'Nagpur', 'Kolhapur'] },
+  { state: 'Tamil Nadu', growth: 6.2, rank: 3, investment: 24560, vehicleRegistrations: 320000, portfolio: { textiles: 25, electronics: 21, auto: 12, mobile_components: 13, hardware_assembly: 10, battery_manufacturing: 9, shipbuilding: 6, defense_manufacturing: 4 }, mainCities: ['Chennai', 'Coimbatore', 'Tiruppur', 'Madurai', 'Hosur', 'Trichy'] },
+  { state: 'Uttar Pradesh', growth: 8.5, rank: 4, investment: 22340, vehicleRegistrations: 215000, portfolio: { sugar: 19, chemicals: 18, autos: 14, mobile_components: 16, hardware_assembly: 13, battery_manufacturing: 8, defense_manufacturing: 5, other: 7 }, mainCities: ['Kanpur', 'Lucknow', 'Noida', 'Varanasi', 'Ghaziabad', 'Agra'] },
+  { state: 'Karnataka', growth: 9.1, rank: 5, investment: 21780, vehicleRegistrations: 295000, portfolio: { electronics: 28, auto: 14, pharma: 13, battery_manufacturing: 12, hardware_assembly: 11, mobile_components: 9, defense_manufacturing: 8, shipbuilding: 5 }, mainCities: ['Bangalore', 'Belgaum', 'Hubballi', 'Mangalore', 'Mysuru', 'Tumakuru'] },
+  { state: 'Telangana', growth: 7.3, rank: 6, investment: 19450, vehicleRegistrations: 410000, portfolio: { pharma: 29, textiles: 14, auto: 9, electronics: 12, mobile_components: 11, hardware_assembly: 10, battery_manufacturing: 8, defense_manufacturing: 7 }, mainCities: ['Hyderabad', 'Warangal', 'Nizamabad', 'Vikarabad', 'Khammam', 'Karimnagar'] },
   { state: 'West Bengal', growth: 5.8, rank: 7, investment: 17620, vehicleRegistrations: 165000, portfolio: { jute: 35, auto: 30, chemicals: 20, other: 15 }, mainCities: ['Kolkata', 'Durgapur', 'Asansol', 'Siliguri', 'Haldia', 'Howrah'] },
   { state: 'Punjab', growth: 4.9, rank: 8, investment: 15340, vehicleRegistrations: 185000, portfolio: { auto: 40, chemicals: 35, textiles: 15, other: 10 }, mainCities: ['Ludhiana', 'Amritsar', 'Jalandhar', 'Patiala', 'Mohali', 'Bathinda'] },
   { state: 'Rajasthan', growth: 7.2, rank: 9, investment: 14280, vehicleRegistrations: 205000, portfolio: { ceramics: 35, textiles: 30, auto: 20, other: 15 }, mainCities: ['Jaipur', 'Jodhpur', 'Udaipur', 'Kota', 'Bhiwadi', 'Ajmer'] },
-  { state: 'Andhra Pradesh', growth: 6.8, rank: 10, investment: 13950, vehicleRegistrations: 275000, portfolio: { pharma: 40, auto: 30, electronics: 20, other: 10 }, mainCities: ['Visakhapatnam', 'Vijayawada', 'Tirupati', 'Guntur', 'Kakinada', 'Nellore'] },
+  { state: 'Andhra Pradesh', growth: 6.8, rank: 10, investment: 13950, vehicleRegistrations: 275000, portfolio: { pharma: 24, auto: 16, electronics: 14, shipbuilding: 15, defense_manufacturing: 9, hardware_assembly: 8, mobile_components: 8, other: 6 }, mainCities: ['Visakhapatnam', 'Vijayawada', 'Tirupati', 'Guntur', 'Kakinada', 'Nellore'] },
   { state: 'Madhya Pradesh', growth: 6.4, rank: 11, investment: 13420, vehicleRegistrations: 190000, portfolio: { auto: 38, chemicals: 32, steel: 20, other: 10 }, mainCities: ['Indore', 'Bhopal', 'Gwalior', 'Jabalpur', 'Ujjain', 'Dewas'] },
   { state: 'Haryana', growth: 8.3, rank: 12, investment: 12890, vehicleRegistrations: 295000, portfolio: { auto: 45, electronics: 30, chemicals: 15, other: 10 }, mainCities: ['Gurgaon', 'Faridabad', 'Hisar', 'Rohtak', 'Panipat', 'Sonipat'] },
-  { state: 'Odisha', growth: 7.6, rank: 13, investment: 12150, vehicleRegistrations: 145000, portfolio: { steel: 45, auto: 25, chemicals: 20, other: 10 }, mainCities: ['Rourkela', 'Cuttack', 'Paradip', 'Sambalpur', 'Jharsuguda', 'Balasore'] },
-  { state: 'Kerala', growth: 5.3, rank: 14, investment: 11780, vehicleRegistrations: 165000, portfolio: { pharma: 50, textiles: 25, food: 15, other: 10 }, mainCities: ['Kochi', 'Thiruvananthapuram', 'Kozhikode', 'Thrissur', 'Palakkad', 'Kannur'] },
+  { state: 'Odisha', growth: 7.6, rank: 13, investment: 12150, vehicleRegistrations: 145000, portfolio: { steel: 28, auto: 12, chemicals: 16, shipbuilding: 14, defense_manufacturing: 11, battery_manufacturing: 9, other: 10 }, mainCities: ['Rourkela', 'Cuttack', 'Paradip', 'Sambalpur', 'Jharsuguda', 'Balasore'] },
+  { state: 'Kerala', growth: 5.3, rank: 14, investment: 11780, vehicleRegistrations: 165000, portfolio: { pharma: 28, textiles: 14, food: 18, shipbuilding: 16, hardware_assembly: 9, chemicals: 8, other: 7 }, mainCities: ['Kochi', 'Thiruvananthapuram', 'Kozhikode', 'Thrissur', 'Palakkad', 'Kannur'] },
   { state: 'Himachal Pradesh', growth: 6.1, rank: 15, investment: 10620, vehicleRegistrations: 95000, portfolio: { cement: 40, auto: 35, chemicals: 15, other: 10 }, mainCities: ['Shimla', 'Mandi', 'Solan', 'Kangra', 'Baddi', 'Una'] },
   { state: 'Uttarakhand', growth: 6.7, rank: 16, investment: 10340, vehicleRegistrations: 110000, portfolio: { chemicals: 40, pharma: 35, food: 15, other: 10 }, mainCities: ['Dehradun', 'Haridwar', 'Roorkee', 'Pithoragarh', 'Rudrapur', 'Haldwani'] },
-  { state: 'Goa', growth: 5.4, rank: 17, investment: 8950, vehicleRegistrations: 75000, portfolio: { iron_ore: 50, chemicals: 25, auto: 15, other: 10 }, mainCities: ['Panaji', 'Vasco da Gama', 'Margao', 'Pernem', 'Mapusa', 'Ponda'] },
+  { state: 'Goa', growth: 5.4, rank: 17, investment: 8950, vehicleRegistrations: 75000, portfolio: { iron_ore: 34, chemicals: 18, auto: 10, shipbuilding: 20, defense_manufacturing: 8, other: 10 }, mainCities: ['Panaji', 'Vasco da Gama', 'Margao', 'Pernem', 'Mapusa', 'Ponda'] },
   { state: 'Bihar', growth: 4.8, rank: 18, investment: 8120, vehicleRegistrations: 125000, portfolio: { sugar: 40, pharma: 30, auto: 20, other: 10 }, mainCities: ['Patna', 'Gaya', 'Bhagalpur', 'Muzaffarpur', 'Darbhanga', 'Hajipur'] },
   { state: 'Assam', growth: 5.2, rank: 19, investment: 7680, vehicleRegistrations: 105000, portfolio: { tea: 45, chemicals: 30, auto: 15, other: 10 }, mainCities: ['Guwahati', 'Silchar', 'Dibrugarh', 'Barpeta', 'Jorhat', 'Tezpur'] },
   { state: 'Tripura', growth: 4.5, rank: 20, investment: 6420, vehicleRegistrations: 65000, portfolio: { rubber: 40, chemicals: 35, textiles: 15, other: 10 }, mainCities: ['Agartala', 'Udaipur', 'Kailashahar', 'Dharmanagar', 'Ambassa', 'Belonia'] },
@@ -1121,74 +1947,236 @@ const states = [
   { state: 'Arunachal Pradesh', growth: 4.4, rank: 29, investment: 4780, vehicleRegistrations: 42000, portfolio: { food: 50, forestry: 35, auto: 10, other: 5 }, mainCities: ['Itanagar', 'Naharlagun', 'Pasighat', 'Tezu', 'Bomdila', 'Roing'] }
 ];
 
+Object.assign(states.find((state) => state.state === 'Gujarat')?.portfolio || {}, {
+  engineering_goods: 8,
+  renewable_equipment: 6,
+  packaging_paper: 4,
+  semiconductors: 2,
+  ceramics_building_materials: 5
+});
+Object.assign(states.find((state) => state.state === 'Maharashtra')?.portfolio || {}, {
+  engineering_goods: 8,
+  aerospace: 5,
+  industrial_machinery: 7,
+  medical_devices: 5,
+  packaging_paper: 4
+});
+Object.assign(states.find((state) => state.state === 'Tamil Nadu')?.portfolio || {}, {
+  engineering_goods: 6,
+  aerospace: 6,
+  renewable_equipment: 7,
+  semiconductors: 5,
+  medical_devices: 6,
+  ceramics_building_materials: 4
+});
+Object.assign(states.find((state) => state.state === 'Uttar Pradesh')?.portfolio || {}, {
+  engineering_goods: 5,
+  medical_devices: 6,
+  packaging_paper: 4,
+  semiconductors: 3
+});
+Object.assign(states.find((state) => state.state === 'Karnataka')?.portfolio || {}, {
+  engineering_goods: 5,
+  aerospace: 10,
+  renewable_equipment: 6,
+  semiconductors: 8,
+  medical_devices: 5,
+  industrial_machinery: 4
+});
+Object.assign(states.find((state) => state.state === 'Telangana')?.portfolio || {}, {
+  engineering_goods: 4,
+  aerospace: 6,
+  semiconductors: 8,
+  medical_devices: 7
+});
+Object.assign(states.find((state) => state.state === 'Punjab')?.portfolio || {}, {
+  engineering_goods: 9,
+  industrial_machinery: 5,
+  packaging_paper: 8
+});
+Object.assign(states.find((state) => state.state === 'Rajasthan')?.portfolio || {}, {
+  ceramics_building_materials: 18,
+  engineering_goods: 6,
+  renewable_equipment: 4,
+  packaging_paper: 3
+});
+Object.assign(states.find((state) => state.state === 'Andhra Pradesh')?.portfolio || {}, {
+  engineering_goods: 5,
+  renewable_equipment: 8,
+  medical_devices: 5,
+  semiconductors: 3
+});
+Object.assign(states.find((state) => state.state === 'Madhya Pradesh')?.portfolio || {}, {
+  engineering_goods: 9,
+  industrial_machinery: 8,
+  packaging_paper: 4,
+  ceramics_building_materials: 3
+});
+Object.assign(states.find((state) => state.state === 'Haryana')?.portfolio || {}, {
+  engineering_goods: 10,
+  industrial_machinery: 7,
+  medical_devices: 4,
+  packaging_paper: 3
+});
+Object.assign(states.find((state) => state.state === 'Odisha')?.portfolio || {}, {
+  engineering_goods: 4,
+  renewable_equipment: 8,
+  ceramics_building_materials: 4
+});
+Object.assign(states.find((state) => state.state === 'Kerala')?.portfolio || {}, {
+  renewable_equipment: 4,
+  medical_devices: 5,
+  packaging_paper: 6
+});
+Object.assign(states.find((state) => state.state === 'Uttarakhand')?.portfolio || {}, {
+  medical_devices: 9,
+  packaging_paper: 4
+});
+Object.assign(states.find((state) => state.state === 'West Bengal')?.portfolio || {}, {
+  engineering_goods: 5,
+  packaging_paper: 6,
+  industrial_machinery: 4
+});
+Object.assign(states.find((state) => state.state === 'Bihar')?.portfolio || {}, {
+  packaging_paper: 5,
+  engineering_goods: 4
+});
+Object.assign(states.find((state) => state.state === 'Assam')?.portfolio || {}, {
+  packaging_paper: 4,
+  engineering_goods: 3
+});
+
 const sectors = [
-  { name: 'Automotive', growth: 8.2, share: 15.3, color: '#1e3a8a' },
-  { name: 'Pharmaceuticals', growth: 12.1, share: 18.7, color: '#10b981' },
-  { name: 'Textiles', growth: 3.4, share: 12.1, color: '#f59e0b' },
-  { name: 'Electronics', growth: 15.6, share: 22.4, color: '#8b5cf6' },
-  { name: 'Chemicals', growth: 6.8, share: 14.2, color: '#ef4444' },
-  { name: 'Food Processing', growth: 4.9, share: 8.1, color: '#06b6d4' },
-  { name: 'Steel & Metals', growth: 5.3, share: 10.2, color: '#6b7280' }
+  { name: 'Electronics', growth: 15.6, share: 10.0, color: '#8b5cf6' },
+  { name: 'Pharmaceuticals', growth: 12.1, share: 8.8, color: '#10b981' },
+  { name: 'Automotive', growth: 8.2, share: 8.3, color: '#1e3a8a' },
+  { name: 'Chemicals', growth: 6.8, share: 7.9, color: '#ef4444' },
+  { name: 'Textiles', growth: 3.4, share: 6.8, color: '#f59e0b' },
+  { name: 'Steel & Metals', growth: 5.3, share: 5.9, color: '#6b7280' },
+  { name: 'Food Processing', growth: 4.9, share: 5.2, color: '#06b6d4' },
+  { name: 'Battery Manufacturing', growth: 18.6, share: 4.5, color: '#22c55e' },
+  { name: 'Engineering Goods', growth: 7.4, share: 4.0, color: '#7c3aed' },
+  { name: 'Mobile Components', growth: 15.1, share: 3.8, color: '#0ea5e9' },
+  { name: 'Hardware Assembly', growth: 12.6, share: 3.4, color: '#f97316' },
+  { name: 'Renewable Equipment', growth: 13.4, share: 3.3, color: '#16a34a' },
+  { name: 'Defense Manufacturing', growth: 12.0, share: 3.1, color: '#334155' },
+  { name: 'Packaging & Paper', growth: 6.8, share: 2.9, color: '#92400e' },
+  { name: 'Industrial Machinery', growth: 6.9, share: 2.9, color: '#2563eb' },
+  { name: 'Medical Devices', growth: 10.7, share: 2.5, color: '#0f766e' },
+  { name: 'Shipbuilding', growth: 9.3, share: 2.3, color: '#14b8a6' },
+  { name: 'Aerospace', growth: 10.6, share: 2.2, color: '#4338ca' },
+  { name: 'Semiconductors', growth: 17.4, share: 1.7, color: '#e11d48' },
+  { name: 'Ceramics & Building Materials', growth: 6.5, share: 3.6, color: '#a16207' }
 ];
 
-const regionalClusters = [
-  {
-    name: 'Mumbai-Pune-Nashik',
-    cities: ['Mumbai', 'Pune', 'Nashik'],
-    combinedInvestment: 20820,
-    avgGrowth: 7.1,
-    focusSectors: ['Automotive', 'Chemicals', 'Electronics']
-  },
-  {
-    name: 'Bangalore-Hosur',
-    cities: ['Bangalore', 'Hosur'],
-    combinedInvestment: 12400,
-    avgGrowth: 8.6,
-    focusSectors: ['Electronics', 'Automotive', 'Aerospace']
-  },
-  {
-    name: 'NCR-Delhi',
-    cities: ['Delhi', 'Noida', 'Gurgaon', 'Faridabad', 'Ghaziabad'],
-    combinedInvestment: 28750,
-    avgGrowth: 8.5,
-    focusSectors: ['Electronics', 'Automotive', 'Engineering Goods']
-  },
-  {
-    name: 'Chennai-Coimbatore-Hosur',
-    cities: ['Chennai', 'Coimbatore', 'Hosur'],
-    combinedInvestment: 15730,
-    avgGrowth: 7.6,
-    focusSectors: ['Textiles', 'Electronics', 'Automotive']
-  },
-  {
-    name: 'Ahmedabad-Vadodara-Surat',
-    cities: ['Ahmedabad', 'Vadodara', 'Surat'],
-    combinedInvestment: 18980,
-    avgGrowth: 7.6,
-    focusSectors: ['Automotive', 'Chemicals', 'Textiles']
-  },
-  {
-    name: 'Hyderabad-Warangal',
-    cities: ['Hyderabad', 'Warangal'],
-    combinedInvestment: 11070,
-    avgGrowth: 7.8,
-    focusSectors: ['Pharmaceuticals', 'Textiles', 'Electronics']
-  },
-  {
-    name: 'Visakhapatnam-Vijayawada',
-    cities: ['Visakhapatnam', 'Vijayawada'],
-    combinedInvestment: 10550,
-    avgGrowth: 7.4,
-    focusSectors: ['Pharmaceuticals', 'Food Processing', 'Automotive']
-  },
-  {
-    name: 'Eastern Metals Belt',
-    cities: ['Ranchi', 'Raipur', 'Durgapur'],
-    combinedInvestment: 10010,
-    avgGrowth: 6.2,
-    focusSectors: ['Steel & Metals', 'Mining', 'Chemicals']
-  }
+const regionalClusterBlueprints = [
+  { name: 'Mumbai-Pune-Nashik', cities: ['Mumbai', 'Pune', 'Nashik'], focusSectors: ['Automotive', 'Chemicals', 'Electronics'] },
+  { name: 'Aurangabad-Nagpur Inland Belt', cities: ['Aurangabad', 'Nagpur'], focusSectors: ['Hardware Assembly', 'Automotive', 'Battery Manufacturing'] },
+  { name: 'Bangalore-Hosur-Mysuru', cities: ['Bangalore', 'Hosur', 'Mysuru'], focusSectors: ['Electronics', 'Mobile Components', 'Aerospace'] },
+  { name: 'Mangalore-Kochi Coastal Yards', cities: ['Mangalore', 'Kochi'], focusSectors: ['Shipbuilding', 'Chemicals', 'Food Processing'] },
+  { name: 'NCR-Delhi', cities: ['Delhi', 'Noida', 'Gurgaon', 'Faridabad', 'Ghaziabad'], focusSectors: ['Electronics', 'Automotive', 'Engineering Goods'] },
+  { name: 'Kanpur-Lucknow-Varanasi', cities: ['Kanpur', 'Lucknow', 'Varanasi'], focusSectors: ['Chemicals', 'Hardware Assembly', 'Medical Devices'] },
+  { name: 'Ahmedabad-Vadodara-Surat-Rajkot', cities: ['Ahmedabad', 'Vadodara', 'Surat', 'Rajkot'], focusSectors: ['Automotive', 'Chemicals', 'Engineering Goods'] },
+  { name: 'Chennai-Coimbatore-Hosur', cities: ['Chennai', 'Coimbatore', 'Hosur'], focusSectors: ['Textiles', 'Electronics', 'Automotive'] },
+  { name: 'Tiruppur-Madurai South TN', cities: ['Tiruppur', 'Madurai'], focusSectors: ['Textiles', 'Battery Manufacturing', 'Mobile Components'] },
+  { name: 'Hyderabad-Warangal', cities: ['Hyderabad', 'Warangal'], focusSectors: ['Pharmaceuticals', 'Textiles', 'Electronics'] },
+  { name: 'Visakhapatnam-Vijayawada-Tirupati-Guntur', cities: ['Visakhapatnam', 'Vijayawada', 'Tirupati', 'Guntur'], focusSectors: ['Pharmaceuticals', 'Hardware Assembly', 'Shipbuilding'] },
+  { name: 'Kolkata-Durgapur Industrial Corridor', cities: ['Kolkata', 'Durgapur'], focusSectors: ['Chemicals', 'Steel & Metals', 'Packaging & Paper'] },
+  { name: 'Eastern Metals Belt', cities: ['Ranchi', 'Jamshedpur', 'Raipur', 'Bhilai'], focusSectors: ['Steel & Metals', 'Defense Manufacturing', 'Engineering Goods'] },
+  { name: 'Odisha Defense Coast', cities: ['Bhubaneswar', 'Cuttack'], focusSectors: ['Defense Manufacturing', 'Shipbuilding', 'Battery Manufacturing'] },
+  { name: 'Rajasthan Growth Arc', cities: ['Jaipur', 'Jodhpur'], focusSectors: ['Ceramics & Building Materials', 'Textiles', 'Renewable Equipment'] },
+  { name: 'Central India Belt', cities: ['Indore', 'Bhopal'], focusSectors: ['Automotive', 'Chemicals', 'Industrial Machinery'] },
+  { name: 'Punjab-Uttarakhand Belt', cities: ['Ludhiana', 'Dehradun', 'Haridwar'], focusSectors: ['Engineering Goods', 'Medical Devices', 'Battery Manufacturing'] },
+  { name: 'Gangetic Manufacturing Belt', cities: ['Patna', 'Bhagalpur'], focusSectors: ['Food Processing', 'Textiles', 'Packaging & Paper'] },
+  { name: 'North East Growth Arc', cities: ['Guwahati', 'Silchar'], focusSectors: ['Chemicals', 'Food Processing', 'Packaging & Paper'] },
+  { name: 'Defense & Shipbuilding Coast', cities: ['Visakhapatnam', 'Mangalore', 'Cuttack', 'Kochi'], focusSectors: ['Shipbuilding', 'Defense Manufacturing', 'Engineering Goods'] }
 ];
+
+const regionalClusters = regionalClusterBlueprints.map((cluster) => {
+  const matchedCities = cityProfiles.filter((city) => cluster.cities.includes(city.city));
+  const combinedInvestment = matchedCities.reduce((sum, city) => sum + city.currentInvestment, 0);
+  const avgGrowth = matchedCities.length
+    ? Number((matchedCities.reduce((sum, city) => sum + city.currentGrowth, 0) / matchedCities.length).toFixed(1))
+    : 0;
+
+  return {
+    ...cluster,
+    combinedInvestment,
+    avgGrowth
+  };
+});
+
+const sectorIntelligence = {
+  'Battery Manufacturing': {
+    supplyRiskScore: 67,
+    supplyRiskLevel: 'Moderate-High',
+    supplyRisks: [
+      { name: 'Lithium feedstock import dependency', score: 78, trend: 'improving' },
+      { name: 'Cathode precursor localization', score: 72, trend: 'stable' },
+      { name: 'Cell-grade electrolyte availability', score: 61, trend: 'improving' },
+      { name: 'Grid power reliability for giga-lines', score: 55, trend: 'improving' }
+    ],
+    capexPipeline: {
+      totalProjects: 18,
+      announcedCr: 46200,
+      underConstructionCr: 28400,
+      commissioning12MCr: 13600,
+      utilizationTarget: '72-78% in next 12 months'
+    },
+    capexByStage: [
+      { stage: 'Announced', value: 46200 },
+      { stage: 'Under Construction', value: 28400 },
+      { stage: 'Commissioning (12M)', value: 13600 }
+    ],
+    priorityStates: ['Gujarat', 'Tamil Nadu', 'Karnataka', 'Maharashtra']
+  },
+  'Mobile Components': {
+    supplyRiskScore: 58,
+    supplyRiskLevel: 'Moderate',
+    supplyRisks: [
+      { name: 'Semiconductor packaging dependence', score: 69, trend: 'improving' },
+      { name: 'Display module glass sourcing', score: 62, trend: 'stable' },
+      { name: 'Camera optics precision supply', score: 54, trend: 'stable' },
+      { name: 'Connector and RF component lead times', score: 47, trend: 'improving' }
+    ],
+    capexPipeline: {
+      totalProjects: 24,
+      announcedCr: 31800,
+      underConstructionCr: 19600,
+      commissioning12MCr: 11200,
+      utilizationTarget: '76-82% in next 12 months'
+    },
+    capexByStage: [
+      { stage: 'Announced', value: 31800 },
+      { stage: 'Under Construction', value: 19600 },
+      { stage: 'Commissioning (12M)', value: 11200 }
+    ],
+    priorityStates: ['Tamil Nadu', 'Uttar Pradesh', 'Karnataka', 'Telangana']
+  },
+  'Hardware Assembly': {
+    supplyRiskScore: 52,
+    supplyRiskLevel: 'Moderate-Low',
+    supplyRisks: [
+      { name: 'Advanced chipset imports', score: 64, trend: 'stable' },
+      { name: 'Thermal component localization', score: 56, trend: 'improving' },
+      { name: 'Precision test equipment availability', score: 49, trend: 'improving' },
+      { name: 'EMS workforce depth in tier-2 cities', score: 41, trend: 'improving' }
+    ],
+    capexPipeline: {
+      totalProjects: 21,
+      announcedCr: 27400,
+      underConstructionCr: 16300,
+      commissioning12MCr: 9300,
+      utilizationTarget: '74-80% in next 12 months'
+    },
+    capexByStage: [
+      { stage: 'Announced', value: 27400 },
+      { stage: 'Under Construction', value: 16300 },
+      { stage: 'Commissioning (12M)', value: 9300 }
+    ],
+    priorityStates: ['Tamil Nadu', 'Karnataka', 'Maharashtra', 'Uttar Pradesh']
+  }
+};
 
 const investmentLocations = cityProfiles.map((city) => ({
   city: city.city,
@@ -1203,11 +2191,16 @@ export const manufacturingData = {
   previousGrowth: 3.7,
   dataSources: [
     { name: 'Ministry of Statistics & Programme Implementation', weight: 20 },
-    { name: 'VAHAN Database (Vehicle Registration)', weight: 18 },
-    { name: 'Central Bank of India (RBI)', weight: 18 },
-    { name: 'Corporate Affairs Ministry', weight: 15 },
-    { name: 'Industry Association Reports', weight: 15 },
-    { name: 'State Government Data', weight: 14 }
+    { name: 'VAHAN Database (Vehicle Registration)', weight: 12 },
+    { name: 'Reserve Bank of India (RBI)', weight: 11 },
+    { name: 'Corporate Affairs Ministry', weight: 9 },
+    { name: 'Industry Association Reports', weight: 9 },
+    { name: 'DPIIT State Investment Monitoring', weight: 8 },
+    { name: 'State Single-Window Investment Portals', weight: 8 },
+    { name: 'Invest India State Investment Project Pipeline', weight: 7 },
+    { name: 'State Industrial Development Corporations', weight: 7 },
+    { name: 'State Economic Survey Manufacturing Annexes', weight: 5 },
+    { name: 'Port-Led Industrial Corridor Databases', weight: 4 }
   ],
   iipData: [
     { month: 'Jan 2024', value: 4.2, category: 'Manufacturing' },
@@ -1245,6 +2238,7 @@ export const manufacturingData = {
   sectorReportingProfiles,
   stateProductLeadership,
   regionalClusters,
+  sectorIntelligence,
   delhiNcrMetrics: {
     region: 'Delhi/NCR',
     growth: 8.5,

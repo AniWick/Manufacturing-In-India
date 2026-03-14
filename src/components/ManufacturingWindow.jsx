@@ -85,7 +85,7 @@ const ManufacturingWindow = ({ isOpen, onClose }) => {
     {
       id: 'cities',
       label: 'Cities',
-      description: 'Top 30 city hotspots and inner city-level drill-down.',
+      description: 'Top 50 city hotspots and inner city-level drill-down.',
       icon: Building2
     },
     {

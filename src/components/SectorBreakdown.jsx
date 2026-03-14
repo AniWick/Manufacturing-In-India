@@ -13,6 +13,7 @@ const SectorBreakdown = () => {
   const sectorHistory = activeSector ? data?.sectorYearlyRecords?.[activeSector.name] || [] : [];
   const activeSectorAnalysis = activeSector ? data?.sectorProductAnalysis?.[activeSector.name] || null : null;
   const activeSectorProfile = activeSector ? data?.sectorReportingProfiles?.[activeSector.name] || null : null;
+  const activeSectorIntelligence = activeSector ? data?.sectorIntelligence?.[activeSector.name] || null : null;
 
   const sectorLeaders = useMemo(() => {
     if (!activeSector || !data?.states) return [];
@@ -29,6 +30,7 @@ const SectorBreakdown = () => {
 
   const productRows = useMemo(() => activeSectorAnalysis?.products || [], [activeSectorAnalysis]);
   const yearlyTrade = activeSectorAnalysis?.yearly || [];
+  const sectorChartHeight = Math.max(360, sectors.length * 28);
 
   const summaryMetrics = useMemo(() => {
     if (!productRows.length) {
@@ -86,41 +88,54 @@ const SectorBreakdown = () => {
           {/* Bar Chart for Growth Rates */}
           <div>
             <h4 className="text-sm font-medium text-gray-600 mb-3">Growth Rates by Sector</h4>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={sectors}>
+            <ResponsiveContainer width="100%" height={sectorChartHeight}>
+              <BarChart data={sectors} layout="vertical" margin={{ top: 6, right: 10, left: 22, bottom: 6 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
-                <YAxis />
+                <XAxis type="number" domain={[0, 'dataMax + 2']} />
+                <YAxis type="category" dataKey="name" width={190} tick={{ fontSize: 11 }} interval={0} />
                 <Tooltip />
                 <Bar dataKey="growth" fill="#8884d8" name="Growth %" onClick={(entry) => setSelectedSector(entry.name)} />
               </BarChart>
             </ResponsiveContainer>
-            <p className="text-xs text-gray-500 mt-2">Click a sector bar, pie slice, or table row to drill deeper.</p>
+            <p className="text-xs text-gray-500 mt-2">Click a sector bar or table row to drill deeper.</p>
           </div>
 
           {/* Pie Chart for Market Share */}
           <div>
             <h4 className="text-sm font-medium text-gray-600 mb-3">Market Share Distribution</h4>
-            <ResponsiveContainer width="100%" height={250}>
-              <PieChart>
-                <Pie
-                  data={sectors}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={({ name, share }) => `${name}: ${share}%`}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="share"
-                  onClick={(entry) => setSelectedSector(entry.name)}
-                >
-                  {sectors.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
+            <div className="rounded-xl border border-gray-200 bg-white p-3">
+              <ResponsiveContainer width="100%" height={220}>
+                <PieChart>
+                  <Pie
+                    data={sectors}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={74}
+                    fill="#8884d8"
+                    dataKey="share"
+                    isAnimationActive={false}
+                  >
+                    {sectors.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(value) => `${value}%`} />
+                </PieChart>
+              </ResponsiveContainer>
+
+              <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-64 overflow-y-auto pr-1">
+                {sectors.map((sector) => (
+                  <div key={sector.name} className="flex items-center justify-between gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-xs text-gray-700">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: sector.color }} />
+                      <span className="truncate">{sector.name}</span>
+                    </div>
+                    <span className="font-semibold text-gray-900 flex-shrink-0">{sector.share}%</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -311,6 +326,72 @@ const SectorBreakdown = () => {
                 </div>
               </div>
             </div>
+
+            {activeSectorIntelligence && (
+              <div className="mt-5 rounded-xl border border-cyan-200 bg-cyan-50 p-4">
+                <h5 className="text-sm font-semibold text-cyan-900 mb-3">Sector Intelligence: Supply Chain Risk & Capex Pipeline</h5>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3 mb-4">
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <p className="text-xs text-gray-600">Supply risk score</p>
+                    <p className="text-2xl font-bold text-cyan-700 mt-1">{activeSectorIntelligence.supplyRiskScore}/100</p>
+                  </div>
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <p className="text-xs text-gray-600">Risk level</p>
+                    <p className="text-lg font-semibold text-cyan-700 mt-1">{activeSectorIntelligence.supplyRiskLevel}</p>
+                  </div>
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <p className="text-xs text-gray-600">Projects tracked</p>
+                    <p className="text-2xl font-bold text-cyan-700 mt-1">{activeSectorIntelligence.capexPipeline.totalProjects}</p>
+                  </div>
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <p className="text-xs text-gray-600">Capex announced</p>
+                    <p className="text-2xl font-bold text-cyan-700 mt-1">₹{activeSectorIntelligence.capexPipeline.announcedCr.toLocaleString()}Cr</p>
+                  </div>
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <p className="text-xs text-gray-600">Utilization target</p>
+                    <p className="text-sm font-semibold text-cyan-700 mt-1">{activeSectorIntelligence.capexPipeline.utilizationTarget}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <h6 className="text-sm font-medium text-gray-700 mb-2">Capex Pipeline by Stage</h6>
+                    <ResponsiveContainer width="100%" height={220}>
+                      <BarChart data={activeSectorIntelligence.capexByStage}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="stage" tick={{ fontSize: 11 }} />
+                        <YAxis />
+                        <Tooltip formatter={(value) => `₹${Number(value).toLocaleString()}Cr`} />
+                        <Bar dataKey="value" fill="#0891b2" radius={[6, 6, 0, 0]} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+
+                  <div className="rounded-lg border border-cyan-200 bg-white p-3">
+                    <h6 className="text-sm font-medium text-gray-700 mb-2">Supply-Chain Risk Hotspots</h6>
+                    <div className="space-y-2">
+                      {activeSectorIntelligence.supplyRisks.map((risk) => (
+                        <div key={risk.name} className="rounded-md border border-slate-200 p-2 bg-slate-50">
+                          <div className="flex items-center justify-between gap-2">
+                            <p className="text-sm text-gray-800 font-medium">{risk.name}</p>
+                            <span className="text-xs font-semibold text-cyan-700">{risk.score}/100</span>
+                          </div>
+                          <div className="w-full bg-slate-200 rounded-full h-2 mt-2">
+                            <div className="bg-cyan-600 h-2 rounded-full" style={{ width: `${risk.score}%` }} />
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">Trend: {risk.trend}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-3 rounded-md border border-cyan-100 bg-cyan-50 p-2 text-sm text-cyan-900">
+                      Priority states: {activeSectorIntelligence.priorityStates.join(', ')}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
       </div>
