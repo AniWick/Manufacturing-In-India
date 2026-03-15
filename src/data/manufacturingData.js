@@ -2178,6 +2178,84 @@ const sectorIntelligence = {
   }
 };
 
+const sectorPortfolioAliases = {
+  Electronics: ['electronics'],
+  Pharmaceuticals: ['pharma', 'pharmaceuticals'],
+  Automotive: ['automotive', 'auto', 'autos'],
+  Chemicals: ['chemicals'],
+  Textiles: ['textiles'],
+  'Steel & Metals': ['steel'],
+  'Food Processing': ['food_processing', 'food'],
+  'Battery Manufacturing': ['battery_manufacturing'],
+  'Engineering Goods': ['engineering_goods'],
+  'Mobile Components': ['mobile_components'],
+  'Hardware Assembly': ['hardware_assembly'],
+  'Renewable Equipment': ['renewable_equipment'],
+  'Defense Manufacturing': ['defense_manufacturing'],
+  'Packaging & Paper': ['packaging_paper'],
+  'Industrial Machinery': ['industrial_machinery'],
+  'Medical Devices': ['medical_devices'],
+  Shipbuilding: ['shipbuilding'],
+  Aerospace: ['aerospace'],
+  Semiconductors: ['semiconductors'],
+  'Ceramics & Building Materials': ['ceramics_building_materials', 'ceramics']
+};
+
+const resolvePriorityStates = (sectorName) => {
+  const aliases = sectorPortfolioAliases[sectorName] || [sectorName.toLowerCase().replace(/[^a-z0-9]+/g, '_')];
+
+  return states
+    .map((state) => {
+      const score = aliases.reduce((sum, alias) => sum + (state.portfolio?.[alias] || 0), 0);
+      return {
+        state: state.state,
+        score
+      };
+    })
+    .filter((entry) => entry.score > 0)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 4)
+    .map((entry) => entry.state);
+};
+
+sectors.forEach((sector) => {
+  if (sectorIntelligence[sector.name]) {
+    return;
+  }
+
+  const riskScore = Math.min(78, Math.max(43, Math.round(66 - (sector.growth * 1.1) + (sector.share * 0.9))));
+  const utilizationFloor = Math.min(88, Math.max(62, 66 + Math.round(sector.growth / 1.5)));
+  const utilizationCeiling = Math.min(92, utilizationFloor + 6);
+  const announcedCr = Math.round((sector.share * 2800) + (sector.growth * 520));
+  const underConstructionCr = Math.round(announcedCr * 0.61);
+  const commissioning12MCr = Math.round(announcedCr * 0.34);
+  const priorityStates = resolvePriorityStates(sector.name);
+
+  sectorIntelligence[sector.name] = {
+    supplyRiskScore: riskScore,
+    supplyRiskLevel: riskScore >= 65 ? 'Moderate-High' : riskScore >= 55 ? 'Moderate' : 'Moderate-Low',
+    supplyRisks: [
+      { name: 'Critical input localization depth', score: Math.min(85, riskScore + 8), trend: 'improving' },
+      { name: 'Tier-2 supplier quality consistency', score: Math.min(82, riskScore + 4), trend: 'stable' },
+      { name: 'Logistics and lead-time volatility', score: Math.max(40, riskScore - 3), trend: 'improving' },
+      { name: 'Skilled workforce scaling readiness', score: Math.max(36, riskScore - 7), trend: 'improving' }
+    ],
+    capexPipeline: {
+      totalProjects: Math.max(8, Math.round((sector.share * 1.7) + (sector.growth * 0.45))),
+      announcedCr,
+      underConstructionCr,
+      commissioning12MCr,
+      utilizationTarget: `${utilizationFloor}-${utilizationCeiling}% in next 12 months`
+    },
+    capexByStage: [
+      { stage: 'Announced', value: announcedCr },
+      { stage: 'Under Construction', value: underConstructionCr },
+      { stage: 'Commissioning (12M)', value: commissioning12MCr }
+    ],
+    priorityStates: priorityStates.length ? priorityStates : ['Gujarat', 'Maharashtra', 'Tamil Nadu', 'Karnataka']
+  };
+});
+
 const investmentLocations = cityProfiles.map((city) => ({
   city: city.city,
   state: city.state,

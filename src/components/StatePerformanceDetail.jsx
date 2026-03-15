@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Award, DollarSign, MapPin, Ship } from 'lucide-react';
+import { TrendingUp, Award, IndianRupee, MapPin, Ship } from 'lucide-react';
 import { DataContext } from '../context/DataContext';
 
 const StatePerformanceDetail = () => {
@@ -59,6 +59,13 @@ const StatePerformanceDetail = () => {
                 const growthColor = state.growth >= 8 ? 'text-green-700 bg-green-50' : state.growth >= 6 ? 'text-blue-700 bg-blue-50' : 'text-orange-700 bg-orange-50';
                 const bgColor = idx % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-gray-50 to-white';
                 const leadSummary = stateLeadSummary[state.state] || {};
+                const dominantPortfolio = Object.entries(state.portfolio || {})
+                  .filter(([key]) => key !== 'other')
+                  .sort(([, left], [, right]) => right - left)[0];
+                const fallbackSector = dominantPortfolio
+                  ? dominantPortfolio[0].replaceAll('_', ' ').replace(/\b\w/g, (char) => char.toUpperCase())
+                  : 'Manufacturing Mix';
+                const fallbackShare = dominantPortfolio?.[1] ?? null;
 
                 return (
                   <motion.tr
@@ -96,8 +103,8 @@ const StatePerformanceDetail = () => {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
-                        <DollarSign className="w-4 h-4 text-blue-600" />
-                        <span className="font-bold text-gray-900">₹{state.investment}Cr</span>
+                        <IndianRupee className="w-4 h-4 text-blue-600" />
+                        <span className="font-bold text-gray-900">{state.investment}Cr</span>
                       </div>
                     </td>
                     <td className="px-6 py-4">
@@ -107,7 +114,12 @@ const StatePerformanceDetail = () => {
                           <div className="text-xs text-gray-500 mt-1">{leadSummary.topLine.sector} • {leadSummary.topLine.domestic.toLocaleString()} domestic</div>
                         </div>
                       ) : (
-                        <span className="text-sm text-gray-400">No line mapped</span>
+                        <div>
+                          <div className="font-semibold text-gray-700 text-sm">{fallbackSector}</div>
+                          <div className="text-xs text-gray-500 mt-1">
+                            {fallbackShare !== null ? `${fallbackShare}% portfolio share` : 'Portfolio share tracked'}
+                          </div>
+                        </div>
                       )}
                     </td>
                     <td className="px-6 py-4">
@@ -120,7 +132,10 @@ const StatePerformanceDetail = () => {
                           </div>
                         </div>
                       ) : (
-                        <span className="text-sm text-gray-400">No export line</span>
+                        <div className="text-sm text-gray-500">
+                          <div className="font-medium text-gray-700">{fallbackSector}</div>
+                          <div className="text-xs text-gray-500 mt-1">Export profile building</div>
+                        </div>
                       )}
                     </td>
                     <td className="px-6 py-4">
